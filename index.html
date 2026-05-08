@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>코스피 · 빅테크 · HBM 시그널 대시보드</title>
+<style>
+  :root{
+    --bg:#fafafa; --fg:#111; --muted:#666; --line:#e5e5e5; --card:#fff;
+    --red:#FF3B30; --red-bg:#FFE9E7; --green:#0a8a3a; --blue:#0a66c2;
+    --warn-bg:#FFF8DB; --warn-border:#E5C100;
+    --row-alt:#f5f7f9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1116; --fg:#e8eaed; --muted:#9aa0a6; --line:#2a2f37; --card:#161a21;
+      --red:#FF6F66; --red-bg:#3a1714; --green:#7fd193; --blue:#6aa3ff;
+      --warn-bg:#3a3014; --warn-border:#A48800;
+      --row-alt:#1b2029;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:18px 14px 60px}
+  header{padding:14px 0 8px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  h1{font-size:20px;margin:0 0 6px;letter-spacing:-.01em}
+  .meta{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:10px 18px}
+  .meta b{color:var(--fg);font-weight:600}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--row-alt);font-size:12px;color:var(--fg)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0}
+  h2{font-size:15px;margin:2px 0 10px;letter-spacing:-.005em}
+  h2 .sub{font-weight:400;color:var(--muted);font-size:12.5px;margin-left:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  tbody tr:nth-child(even){background:var(--row-alt)}
+  tbody tr:hover{background:rgba(10,102,194,.07)}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)}
+  .down{color:var(--red)}
+  .nodata{color:var(--muted);font-style:italic}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  ul{margin:6px 0 4px;padding-left:18px}
+  li{margin:3px 0}
+  .redflag{border:2px solid var(--red);background:var(--red-bg);border-radius:10px;padding:14px 16px;margin:14px 0}
+  .redflag h2{color:var(--red)}
+  .ok{color:var(--green);font-weight:600}
+  .warn{background:var(--warn-bg);border-left:3px solid var(--warn-border);padding:8px 10px;border-radius:6px;margin:6px 0;font-size:12.5px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:700px){.grid2{grid-template-columns:1fr}}
+  .src{color:var(--muted);font-size:12px}
+  .barwrap{display:flex;align-items:center;gap:6px}
+  .bar{height:8px;background:#cfd8e3;border-radius:4px;flex:1;min-width:60px;position:relative;overflow:hidden}
+  .bar > span{position:absolute;left:0;top:0;bottom:0;background:var(--blue)}
+  .barwrap .num{font-size:12px;color:var(--muted);min-width:84px;text-align:right}
+  footer{color:var(--muted);font-size:12px;margin-top:30px;text-align:center}
+  code{background:var(--row-alt);padding:1px 5px;border-radius:4px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>코스피 · 빅테크 · HBM 시그널 대시보드</h1>
+  <div class="meta">
+    <span><b>마지막 업데이트:</b> 2026-05-08 01:45 UTC · 10:45 KST</span>
+    <span class="pill">Morning (장중·지연실행)</span>
+    <span><b>직전 갱신과 간격:</b> 최초 실행</span>
+  </div>
+  <div class="meta" style="margin-top:6px">
+    <span>데이터 기준: 2026-05-07(목) 한국 장 마감 / 미국 장 동일자</span>
+  </div>
+</header>
+
+<!-- RED FLAG -->
+<div class="redflag">
+  <h2>🚨 RED FLAG · 변곡점 시그널 (24시간)</h2>
+  <p style="margin:4px 0"><b class="ok">감지된 신규 변곡점 시그널 없음.</b></p>
+  <ul>
+    <li>(a) 빅테크 capex 가이던스 동결/하향 — <b>NO</b>. 4사 모두 상향. 2026 합산 약 $725B (+77% YoY). <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's Hardware</a></li>
+    <li>(b) 메모리·컴포넌트 비용을 capex 상향 사유로 더이상 인용하지 않음 — <b>NO</b>. MSFT CFO는 $25B를 메모리/컴포넌트 가격 상승분으로 명시, META는 "higher component costs" 인용. <a href="https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud">TNW Q1'26 정리</a></li>
+    <li>(c) "capacity constraint eased / resolved / 캐파 제약 해소" 표현 — <b>NO</b>. MSFT는 "remain capacity constrained through 2026", Azure 백로그 $80B. <a href="https://introl.com/blog/hyperscaler-capex-690-billion-microsoft-azure-power-bottleneck-2026">Introl</a></li>
+    <li>(d) 삼성 HBM4 엔비디아 퀄리피케이션 통과 — <b>이미 확인 (2025-12)</b>. 신규 24h 시그널은 아니지만 Q2 2026 본격 납품 임박. <a href="https://www.sammobile.com/news/samsungs-hbm4-chips-have-reportedly-passed-nvidias-tests-with-flying-colors/">SamMobile</a></li>
+    <li>(e) 중국 CXMT HBM 양산 진입 — <b>NO</b>. 오히려 2026 양산은 <i>"unlikely"</i>로 후퇴 (Digitimes 4/21). <a href="https://www.digitimes.com/news/a20260421PD230/cxmt-hbm3-dram-production-2026.html">Digitimes</a></li>
+    <li>(f) HBM 채널 재고 위크 수 4주 초과 — <b>데이터 미확인</b>. TrendForce 5/6 DRAM Bulletin은 "supplier inventories bottomed out"으로 오히려 재고 소진 국면. <a href="https://www.trendforce.com/research/download/RP260506QK">TrendForce 5/6</a></li>
+  </ul>
+  <div class="warn"><b>관전 포인트:</b> 다음 분기(Q2'26) 빅테크 실적콜에서 "메모리 비용" 인용이 사라지거나 "capacity eased" 단어가 처음 등장하는 순간이 사이클 정점 신호. 현시점은 여전히 <b>구조적 공급 부족 국면</b>.</div>
+</div>
+
+<!-- A. 한국 시장 -->
+<section>
+  <h2>A. 한국 시장 시황 <span class="sub">2026-05-07(목) 마감 기준</span></h2>
+  <table>
+    <thead><tr><th>지표</th><th>현재값</th><th>전일대비</th><th>출처</th></tr></thead>
+    <tbody>
+      <tr><td>코스피 종가</td><td class="num">7,490.05</td><td class="num up">+105.49 (+1.43%)</td><td><a href="https://www.fnnews.com/news/202605071425260559">파이낸셜뉴스</a></td></tr>
+      <tr><td>외국인 순매수 (코스피)</td><td class="num down">-7조 1,678억원</td><td class="num down">전일 사상최대 매수(+6.68조) → 매도 전환</td><td><a href="https://www.fnnews.com/news/202605071425260559">파이낸셜뉴스</a></td></tr>
+      <tr><td>개인 / 기관 순매수</td><td class="num">+5조 9,925억 / +1조 954억</td><td class="num">지수 방어</td><td><a href="https://www.fnnews.com/news/202605071425260559">파이낸셜뉴스</a></td></tr>
+      <tr><td>VKOSPI</td><td class="num">60.07 <span class="src">(5/6 기준)</span></td><td class="num up">+4.20 (+7.52%)</td><td><a href="https://www.seoul.co.kr/news/economy/2026/05/06/20260506500200">서울신문</a> · 5/7 종가 <span class="nodata">확인 필요</span></td></tr>
+      <tr><td>원/달러 환율</td><td class="num">1,448.6원 <span class="src">(5/7 개장)</span></td><td class="num down">-6.5원 (개장 기준)</td><td><a href="https://www.asiae.co.kr/article/2026050709021627971">아시아경제</a> · 종가 <span class="nodata">확인 필요</span></td></tr>
+      <tr><td>삼성전자 시가총액</td><td class="num">약 1,507조원 ($1.024T)</td><td class="num">아시아 2번째 $1T 돌파</td><td><a href="https://www.wolyo.co.kr/news/articleView.html?idxno=311664">월요신문</a></td></tr>
+      <tr><td>SK하이닉스 종가</td><td class="num">1,654,000원</td><td class="num">시총 약 1,018조원 (세계 16위)</td><td><a href="https://news.bizwatch.co.kr/article/market/2026/05/07/0003">비즈워치</a> · <a href="https://www.wolyo.co.kr/news/articleView.html?idxno=311664">월요신문</a></td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><b>주목:</b> SK증권이 2026-05-07 보고서에서 삼성전자 목표주가 40만→<b>50만원</b>, SK하이닉스 200만→<b>300만원</b>으로 일제 상향. 평가체계를 P/B에서 P/E로 전환하며 "메모리 리레이팅" 본격화. 다만 외국인 사상 최대 매도(-7.17조)는 단기 차익실현 압력으로 해석. <a href="https://www.mt.co.kr/stock/2026/05/07/2026050709584928346">머니투데이</a></div>
+</section>
+
+<!-- B. 빅테크 capex 시그널 -->
+<section>
+  <h2>B. 미국 빅테크 capex 시그널</h2>
+  <table>
+    <thead><tr><th>티커</th><th>2026 capex 가이던스</th><th>다음 실적</th><th>최근 24h capex 코멘트</th></tr></thead>
+    <tbody>
+      <tr><td><b>MSFT</b></td><td class="num">$190B (vs $152B 컨센)</td><td>2026-07 (FY26 Q4)</td><td>CFO: $25B는 메모리/컴포넌트 가격 상승분. "Capacity constrained through 2026". Azure 백로그 $80B. <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's HW</a></td></tr>
+      <tr><td><b>GOOGL</b></td><td class="num">$180–190B (상향)</td><td>2026-07 (Q2'26)</td><td>Google Cloud 매출 +63% YoY → $20B. 클라우드 백로그 $462B (전분기 대비 약 2배). <a href="https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud">TNW</a></td></tr>
+      <tr><td><b>META</b></td><td class="num">$125–145B (상향)</td><td>2026-07 (Q2'26)</td><td>5/1 $25B 채권 발행 (6 트랜치). "Higher component costs and added DC capacity" 명시. 주문 $96B (직전 $125B 대비 약화). <a href="https://www.bloomberg.com/news/articles/2026-04-30/meta-kicks-off-bond-offering-after-boosting-spending-outlook">Bloomberg</a></td></tr>
+      <tr><td><b>AMZN</b></td><td class="num">~$200B</td><td>2026-07 (Q2'26)</td><td>Q1 FCF $1.2B (전년 동기 $26B). MS·BofA 모두 2026 FCF 마이너스 전망. <a href="https://www.fool.com/investing/2026/04/30/amazon-meta-alphabet-and-microsoft-just-reported-e/">Motley Fool</a></td></tr>
+    </tbody>
+  </table>
+  <ul style="margin-top:10px">
+    <li><b>합산 2026 capex ≈ $725B (+77% YoY)</b>. 사상 최대의 집중 인프라 사이클. <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's Hardware</a></li>
+    <li><b>클라우드 백로그:</b> Alphabet $462B(+약 2배 QoQ), Microsoft Azure 미충족 백로그 $80B — 전력·캐파 제약. <a href="https://introl.com/blog/hyperscaler-capex-690-billion-microsoft-azure-power-bottleneck-2026">Introl</a></li>
+    <li><b>4사 주가 (5/7 종가):</b> <span class="nodata">정확 종가 확인 필요</span> — 4/29 실적 발표 후 등락 혼조 (Alphabet/META 강세, AMZN/MSFT 약세). <a href="https://www.cnbc.com/2026/04/29/stocks-making-the-biggest-moves-after-hours-googl-msft-amzn-meta.html">CNBC</a></li>
+  </ul>
+</section>
+
+<!-- C. 빅테크 재무 건전성 -->
+<section>
+  <h2>C. 빅테크 재무 건전성 <span class="sub">현금흐름 · 부채 · AI 매출</span></h2>
+  <h3 style="font-size:13.5px;margin:6px 0 4px">FCF 압박</h3>
+  <table>
+    <thead><tr><th>회사</th><th>최근 분기/연간 FCF</th><th>2026 전망</th><th>출처</th></tr></thead>
+    <tbody>
+      <tr><td>AMZN</td><td class="num down">Q1 $1.2B (전년 $26B)</td><td class="num down">-$17B (MS) / -$28B (BofA)</td><td><a href="https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html">CNBC</a></td></tr>
+      <tr><td>GOOGL</td><td class="num">2025 $73.3B</td><td class="num down">$8.2B (-89%, Pivotal Research)</td><td><a href="https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html">CNBC</a></td></tr>
+      <tr><td>MSFT</td><td>—</td><td class="num down">-28% YoY (Barclays), 2027년 회복</td><td><a href="https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html">CNBC</a></td></tr>
+      <tr><td>META</td><td>—</td><td>5/1 $25B 채권으로 보강</td><td><a href="https://www.bloomberg.com/news/articles/2026-04-30/meta-kicks-off-bond-offering-after-boosting-spending-outlook">Bloomberg</a></td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:13.5px;margin:14px 0 4px">부채/CDS</h3>
+  <ul>
+    <li><b>META</b>: 5/1 $25B 6트랜치 발행 완료. 가산금리 ~T+180bp. 주문 강도 약화 ($96B vs 직전 $125B). <a href="https://techjacksolutions.com/ai-brief/meta-25b-bond-sale-ai-infrastructure-capex-145b/">Tech Jacks</a></li>
+    <li><b>GOOGL</b>: 2025-11 $25B 발행. 장기부채 2025년 4배 → $46.5B. <a href="https://www.cnbc.com/2026/02/06/google-microsoft-meta-amazon-ai-cash.html">CNBC</a></li>
+    <li><b>ORCL</b>: CDS 스프레드 <b>>125bp</b> (2009 금융위기 이후 최고). Barclays는 BBB-(투자등급 최저) 강등 가능성 경고. FY26 capex 가이던스 +$15B → $50B. <a href="https://blocknow.com/microsoft-google-amazon-meta-400-billion-debt-ai-capex/">BlockNow</a></li>
+    <li><b>MSFT/META/AMZN CDS</b>: 6월 이후 점진 확대 (구체 수치 <span class="nodata">확인 필요</span>). <a href="https://www.janushenderson.com/corporate/article/mega-issuance-and-the-ai-arms-race-big-techs-impact-on-credit-spreads/">Janus Henderson</a></li>
+    <li>Big4 합산 신규 채권 발행 트래커: <b>~$400B</b> (capex +74% 동반). <a href="https://blocknow.com/microsoft-google-amazon-meta-400-billion-debt-ai-capex/">BlockNow</a></li>
+  </ul>
+
+  <h3 style="font-size:13.5px;margin:14px 0 4px">AI 매출 회수</h3>
+  <ul>
+    <li><b>Google Cloud</b> 매출 +63% YoY → $20B. 백로그 $462B (QoQ 거의 2배). 4사 중 유일하게 시장이 "회수 증명" 인정. <a href="https://fortune.com/2026/04/29/microsoft-meta-google-ai-capex-spending-billions/">Fortune</a></li>
+    <li><b>Microsoft Azure</b>: 미충족 수요 백로그 $80B — 매출이 아닌 캐파 제약. <a href="https://www.abhs.in/blog/microsoft-meta-google-amazon-q1-2026-earnings-ai-capex-630-billion-preview">AB Gautam</a></li>
+    <li>Capex/매출 회수 비율은 4사 모두 1.0 미만 (capex가 AI 직접매출 초과) — <b>구조적으로 부채·외부자금 의존</b>. <a href="https://tomtunguz.com/2026-04-29-the-112-billion-quarter-hyperscalers-bet-the-farm-on-ai/">Tom Tunguz</a></li>
+  </ul>
+</section>
+
+<!-- D. 변곡점 키워드 -->
+<section>
+  <h2>D. 변곡점 키워드 자동 탐지 <span class="sub">24시간 윈도우</span></h2>
+  <table>
+    <thead><tr><th>키워드</th><th>24h 내 출현</th><th>출처/맥락</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>"guidance unchanged / maintained / 가이던스 동결"</td>
+        <td><b class="down">없음 (정상)</b></td>
+        <td>4사 모두 capex 가이던스 <b>상향</b> 추세 유지. <a href="https://www.statista.com/chart/35046/capital-expenditure-of-meta-alphabet-amazon-and-microsoft/">Statista</a></td>
+      </tr>
+      <tr>
+        <td>"메모리 가격 / 컴포넌트 비용"이 capex 상향 사유로 인용 안됨 (전 분기 대비)</td>
+        <td><b class="down">아니오 — 여전히 인용</b></td>
+        <td>MSFT CFO: capex의 $25B는 메모리/컴포넌트 가격 상승. META: "higher component costs". <a href="https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud">TNW</a></td>
+      </tr>
+      <tr>
+        <td>"capacity constraint eased / resolved / 캐파 제약 해소"</td>
+        <td><b class="down">없음</b></td>
+        <td>오히려 MSFT: "capacity constrained through 2026" 재확인. Azure 백로그 $80B 미해소. <a href="https://introl.com/blog/hyperscaler-capex-690-billion-microsoft-azure-power-bottleneck-2026">Introl</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="src" style="margin-top:6px">셋 모두 출현 시 ↔ 사이클 정점 가까움 신호. 현재 0/3.</p>
+</section>
+
+<!-- E. HBM 6대 시그널 -->
+<section>
+  <h2>E. HBM 공급 과잉 6대 시그널 모니터</h2>
+  <table>
+    <thead><tr><th>시그널</th><th>현재 상태</th><th>마지막 업데이트</th><th>출처</th></tr></thead>
+    <tbody>
+      <tr><td>1. HBM4 수율 진척</td><td>SK하이닉스 양산 단계, 삼성 내부 테스트 통과 후 양산 임박. NVIDIA가 16-Hi에서 캐파·수율 한계로 일부 스펙 완화 검토 보도</td><td>2026-02</td><td><a href="https://www.trendforce.com/news/2026/02/13/news-nvidia-may-relax-hbm4-specs-as-samsung-and-sk-hynix-reportedly-face-capacity-yield-limits/">TrendForce</a> · <a href="https://www.kedglobal.com/korean-chipmakers/newsView/ked202512030011">KED</a></td></tr>
+      <tr><td>2. 삼성 NVIDIA HBM4 퀄 통과</td><td><b class="up">통과 (2025-12 보도). Q1 2026 공급 계약, Q2 2026 납품 시작 예상</b></td><td>2025-12 / Q2'26 진행</td><td><a href="https://www.sammobile.com/news/samsungs-hbm4-chips-have-reportedly-passed-nvidias-tests-with-flying-colors/">SamMobile</a> · <a href="https://www.trendforce.com/news/2025/12/16/news-sk-hynix-samsung-reportedly-deliver-paid-hbm4-samples-to-nvidia-ahead-of-1q26-contract-finalization/">TrendForce</a></td></tr>
+      <tr><td>3. CXMT HBM 양산 진입</td><td><b class="down">지연. 2026 양산 "unlikely"로 후퇴 (당초 연말 목표)</b>. 캐파 60K wpm (전체의 20%) 계획은 유지</td><td>2026-04-21</td><td><a href="https://www.digitimes.com/news/a20260421PD230/cxmt-hbm3-dram-production-2026.html">Digitimes</a></td></tr>
+      <tr><td>4. 채널 재고 위크 수</td><td><span class="nodata">정확 수치 미공개</span>. TrendForce 5/6 Bulletin: "supplier inventories bottomed out" — 4주 초과 시그널 <b>아님</b></td><td>2026-05-06</td><td><a href="https://www.trendforce.com/research/download/RP260506QK">TrendForce DRAM Bulletin 5/6</a></td></tr>
+      <tr><td>5. 메모리 현물가/계약가</td><td>HBM3E 2026 계약가 +20% (Samsung·SK 합의). DDR5 수익성도 강세, 2Q26 AI 서버 수요로 추가 인상 예상</td><td>2026-03-31 / 진행</td><td><a href="https://www.trendforce.com/presscenter/news/20260331-12995.html">TrendForce 3/31</a></td></tr>
+      <tr><td>6. 신규 IB·리서치 보고서</td><td>SK증권 5/7: 삼성 50만 / SK하이닉스 300만 목표가 (P/B → P/E 전환). 골드만/모건 신규 5/7 코멘트 <span class="nodata">확인 필요</span></td><td>2026-05-07</td><td><a href="https://www.newsspace.kr/news/article.html?no=13839">뉴스스페이스</a></td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><b>요약:</b> 6대 시그널 중 공급 과잉을 시사하는 신호는 <b>0개</b>. 오히려 (1) 가격 인상 (2) 재고 바닥 (3) 중국 양산 지연 (4) 백로그 폭증 — 모두 공급 부족 지속 방향.</div>
+</section>
+
+<!-- F. 매크로/지정학 -->
+<section>
+  <h2>F. 매크로 / 지정학</h2>
+  <table>
+    <thead><tr><th>이슈</th><th>현황</th><th>출처</th></tr></thead>
+    <tbody>
+      <tr><td>미·중 정상회담</td><td><b>2026-05-14 / 15 베이징 개최 확정.</b> 당초 3월 예정이었으나 미국의 이란 관여로 연기. 의제는 대만, 이란, 무역.</td><td><a href="https://www.washingtonpost.com/world/2026/05/07/china-us-senators-trump-xi/688d5004-49dd-11f1-a119-857cd2bf4fd4_story.html">WaPo</a></td></tr>
+      <tr><td>이란-이스라엘 / 호르무즈</td><td>미국이 파키스탄 중재로 1쪽짜리 MOU 전달, 호르무즈 단계적 재개방 제시. 이란 고위 당국자가 사실상 거부 → 유가 반등.</td><td><a href="https://www.cnbc.com/2026/05/07/oil-prices-today-trump-iran-strait-of-hormuz-us-crude-brent-.html">CNBC</a></td></tr>
+      <tr><td>브렌트유 (5/7)</td><td class="num">$101.96 <span class="up">+0.68%</span></td><td><a href="https://tradingeconomics.com/commodity/brent-crude-oil">TradingEconomics</a></td></tr>
+      <tr><td>WTI (5/7)</td><td class="num">$94.81 <span class="down">-0.28%</span></td><td><a href="https://tradingeconomics.com/commodity/crude-oil">TradingEconomics</a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 시계열 -->
+<section>
+  <h2>시계열 차트 <span class="sub">최근 7일 추이</span></h2>
+  <p class="src">최초 실행 — 누적 데이터 1일치만 존재. 다음 회차부터 7일 막대그래프로 표시됩니다.</p>
+  <table>
+    <thead><tr><th>날짜</th><th>코스피</th><th>삼성전자 시총(조)</th><th>SK하이닉스 종가(원)</th><th>원/달러</th></tr></thead>
+    <tbody>
+      <tr><td>2026-05-07</td>
+        <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">7,490.05</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">1,507</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">1,654,000</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">1,448.6 (개장)</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  하루 2회 자동 갱신 (08:00 KST 장 시작 전 / 17:00 KST 장 마감 후)<br>
+  데이터 소스: KRX · 한국경제 · 머니투데이 · 파이낸셜뉴스 · Bloomberg · CNBC · TrendForce · Digitimes · TradingEconomics<br>
+  본 대시보드는 정보 제공용이며 투자 자문이 아닙니다. 모든 수치는 출처 링크에서 직접 확인 가능합니다.
+</footer>
+
+</div>
+</body>
+</html>

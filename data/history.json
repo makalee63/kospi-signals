@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "description": "Append-only daily snapshot of KOSPI / Big Tech / HBM signals. Never modify or delete past entries.",
+  "snapshots": [
+    {
+      "timestamp_utc": "2026-05-08T01:45:00Z",
+      "timestamp_kst": "2026-05-08T10:45:00+09:00",
+      "session": "morning",
+      "note": "First snapshot. Run delayed past 08:00 KST pre-market; uses 2026-05-07 close data.",
+      "korea": {
+        "kospi_close": 7490.05,
+        "kospi_change_pct": 1.43,
+        "kospi_change_pts": 105.49,
+        "foreign_net_buy_krw_bn": -7167.8,
+        "individual_net_buy_krw_bn": 5992.5,
+        "institution_net_buy_krw_bn": 1095.4,
+        "vkospi_last_known": 60.07,
+        "vkospi_last_known_date": "2026-05-06",
+        "usdkrw_open": 1448.6,
+        "usdkrw_close": null,
+        "samsung_market_cap_trn_krw": 1507,
+        "samsung_market_cap_usd_bn": 1024,
+        "skhynix_close_krw": 1654000,
+        "skhynix_market_cap_trn_krw": 1018
+      },
+      "bigtech_capex_2026_guidance_usd_bn": {
+        "MSFT": 190,
+        "GOOGL_low": 180,
+        "GOOGL_high": 190,
+        "META_low": 125,
+        "META_high": 145,
+        "AMZN": 200,
+        "combined_total": 725,
+        "yoy_growth_pct": 77
+      },
+      "bigtech_financial_health": {
+        "AMZN_q1_fcf_usd_bn": 1.2,
+        "AMZN_2026_fcf_proj_usd_bn_morgan_stanley": -17,
+        "AMZN_2026_fcf_proj_usd_bn_bofa": -28,
+        "GOOGL_2026_fcf_proj_usd_bn": 8.2,
+        "MSFT_2026_fcf_decline_pct_barclays": -28,
+        "META_bond_issue_2026_05_01_usd_bn": 25,
+        "ORCL_cds_bp": 125
+      },
+      "hbm_signals": {
+        "samsung_hbm4_nvidia_qual": "passed (late 2025); paid samples; Q1 2026 contract; Q2 2026 deliveries expected",
+        "cxmt_hbm_mass_production": "delayed; 2026 mass production now considered unlikely (Digitimes 2026-04-21)",
+        "hbm_channel_inventory_weeks": null,
+        "hbm3e_pricing_2026_contract_pct": 20,
+        "micron_2026_hbm_supply": "fully booked",
+        "trendforce_dram_bulletin_2026_05_06": "supplier inventories bottomed out"
+      },
+      "macro": {
+        "brent_usd": 101.96,
+        "brent_change_pct": 0.68,
+        "wti_usd": 94.81,
+        "wti_change_pct": -0.28,
+        "iran_us_status": "MOU via Pakistan; Hormuz reopening proposed; senior Iranian rebuffed",
+        "trump_xi_summit": "Beijing 2026-05-14 / 2026-05-15"
+      },
+      "red_flags_triggered_24h": []
+    }
+  ]
+}
