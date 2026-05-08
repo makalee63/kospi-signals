@@ -211,6 +211,94 @@
         }
       ],
       "explainer_panels_added": ["A_korea_market", "B_bigtech_capex", "C_bigtech_financial_health", "D_keyword_detection", "E_hbm_six_signals", "F_macro_geopolitics"]
+    },
+    {
+      "timestamp_utc": "2026-05-08T04:25:00Z",
+      "timestamp_kst": "2026-05-08 13:25 KST",
+      "session": "morning",
+      "snapshot_path": "snapshots/2026-05-08-0425UTC.html",
+      "note": "4th morning intraday update (~2h after 3rd snapshot). KOSPI lunch-session window. New file structure adopted: snapshots/ archive + index.html as session list. Full dashboard moved to snapshots/2026-05-08-0425UTC.html.",
+      "kospi_close": null,
+      "kospi_intraday_1036kst": 7399.31,
+      "kospi_change_pct_intraday_1036kst": -1.21,
+      "kospi_change_pct": -1.21,
+      "kospi_prev_close_5_7": 7490.05,
+      "foreign_net_buy_krw": -1753700000000,
+      "foreign_net_buy_krw_bn_0916kst": -1753.7,
+      "vkospi": 60.07,
+      "vkospi_last_known_date": "2026-05-06",
+      "usd_krw": 1456.00,
+      "usdkrw_overnight_close_0508": 1456.00,
+      "samsung_price": 263000,
+      "samsung_intraday_low_pct": -3.50,
+      "samsung_intraday_recovery_pct": "approx +2% (V-shaped recovery)",
+      "samsung_close_5_7": 271500,
+      "samsung_market_cap_trn_krw": 1507,
+      "sk_hynix_price": 1612000,
+      "skhynix_intraday_low_pct": -3.14,
+      "skhynix_intraday_recovery_pct": "approx +3% (V-shaped recovery)",
+      "skhynix_close_5_7": 1654000,
+      "skhynix_market_cap_trn_krw": 1018,
+      "korea": {
+        "kospi_intraday_0902kst": 7344.28,
+        "kospi_intraday_0916kst": 7330.56,
+        "kospi_intraday_1036kst": 7399.31,
+        "kospi_change_pct_1036kst": -1.21,
+        "foreign_net_buy_krw_bn_0916kst": -1753.7,
+        "vkospi_last_known": 60.07,
+        "vkospi_last_known_date": "2026-05-06",
+        "usdkrw_overnight_close_0508": 1456.00,
+        "samsung_open_change_pct": -3.50,
+        "samsung_recovery_pct": "approx +2%",
+        "skhynix_open_change_pct": -3.14,
+        "skhynix_recovery_pct": "approx +3%"
+      },
+      "us_market_0507_close": {
+        "sp500": 7337.11,
+        "sp500_change_pct": -0.38,
+        "nasdaq": 25806.20,
+        "nasdaq_change_pct": -0.13,
+        "philadelphia_semi_change_pct": -2.7,
+        "delta_vs_prev_snapshot": "no change (same 5/7 close data)"
+      },
+      "bigtech_capex_2026_guidance_usd_bn": {
+        "MSFT": 190,
+        "GOOGL_low": 180,
+        "GOOGL_high": 190,
+        "META_low": 125,
+        "META_high": 145,
+        "AMZN": 200,
+        "combined_total": 725,
+        "yoy_growth_pct": 77,
+        "delta_vs_prev_snapshot": "no change in 24h; next trigger Q2'26 earnings (2026-07)",
+        "hyperscaler_rpo_combined_usd_trn": 1.63
+      },
+      "bigtech_financial_health": {
+        "delta_vs_prev_snapshot": "no new data in 24h; next trigger Q2'26 earnings (2026-07)"
+      },
+      "hbm_signals": {
+        "samsung_hbm4_status": "passed NVIDIA qual (2025-12); mass production began 2026-02; 30%+ NVIDIA HBM4 supply contract finalization stage; yield ~50% (need 70% for full mass production)",
+        "skhynix_hbm4_status": "M15X fab first cleanroom completion in May 2026 with pilot operations (HBM3E + HBM4 production); 11Gb/s test optimization ongoing",
+        "cxmt_hbm_mass_production": "delayed per Digitimes 2026-04-21 (primary source); secondary reports (Technetbook April) claim 12-layer HBM first mass production — conflicting",
+        "hbm_channel_inventory_weeks": null,
+        "trendforce_dram_bulletin_2026_05_06": "supplier inventories bottomed out; AI/server demand driving Q2 contract price hikes",
+        "trendforce_q2_2026_dram_contract_qoq_pct_low": 58,
+        "trendforce_q2_2026_dram_contract_qoq_pct_high": 63,
+        "trendforce_q1_2026_dram_contract_qoq_pct_actual": "90-95%",
+        "trendforce_q2_2026_nand_contract_qoq_pct_high": 75,
+        "rdimm_vs_hbm_pricing": "RDIMM contract prices have overtaken HBM (atypical) — TrendForce Apr.2026"
+      },
+      "macro": {
+        "brent_usd_5_8_open": 102.01,
+        "wti_usd_5_7_close": 90.5,
+        "iran_us_status": "Overnight 5/7-5/8 US strikes on Bandar Abbas and Qeshm Island (retaliation for Iranian missile/drone/small-boat attacks on USS Truxton, USS Mason, USS Rafael Peralta); Trump: no destroyer damage. 14-point MOU under negotiation (end war, 30-day window, 12-yr enrichment moratorium, HEU transfer, US sanctions relief, Hormuz transit unrestricted). Iran publicly more pessimistic than US officials.",
+        "trump_xi_summit": "Beijing 2026-05-14 / 2026-05-15 confirmed; agenda: Iran oil, Taiwan, tariffs, rare earths, semis (H200, AI safety dialogue), Jimmy Lai release possibility; Trump first US presidential visit to China in ~10 years"
+      },
+      "red_flags": [],
+      "red_flags_triggered_24h": [],
+      "summary": "5/8 장중 점심 시간대 갱신: KOSPI 약 -1.2%(7,399.31, 10:36 KST 기준)로 오전 저점 -2.13%에서 회복; 삼성·SK하이닉스 -3% 개장 후 V자 +2~3%; 외국인 매도 지속(-1.75조원); 24h 신규 RED FLAG 트리거 0건; 호르무즈는 진행 중·신규 격화 없음.",
+      "explainer_panels_added": ["A_korea_market", "B_bigtech_capex", "C_bigtech_financial_health", "D_keyword_detection", "E_hbm_six_signals", "F_macro_geopolitics"],
+      "file_structure_change": "Migrated to per-session snapshots: full dashboard now lives at snapshots/2026-05-08-0425UTC.html; index.html regenerated as session list."
     }
   ]
 }
