@@ -77,14 +77,14 @@
         "vkospi_last_known_date": "2026-05-06",
         "usdkrw_open_0508": 1445.48,
         "usdkrw_open_change_vs_0507": -3.12,
-        "samsung_intraday_change_pct": -3.50,
+        "samsung_intraday_change_pct": -3.5,
         "skhynix_intraday_change_pct": -3.14,
         "skhynix_close_krw_0507": 1654000
       },
       "us_market_0507_close": {
         "sp500": 7337.11,
         "sp500_change_pct": -0.38,
-        "nasdaq": 25806.20,
+        "nasdaq": 25806.2,
         "nasdaq_change_pct": -0.13,
         "philadelphia_semi_change_pct": -2.7
       },
@@ -105,7 +105,10 @@
       "hbm_signals": {
         "samsung_hbm4_status": "passed NVIDIA qual (2025-12); mass production began 2026-02; shipping to NVIDIA",
         "skhynix_hbm4_status": "still optimizing for 11Gb/s test (per 2026-03 reports); mass-production line in place since Sept 2025",
-        "nvidia_hbm4_share": {"skhynix_pct": 70, "samsung_socamm2_pct": 50},
+        "nvidia_hbm4_share": {
+          "skhynix_pct": 70,
+          "samsung_socamm2_pct": 50
+        },
         "cxmt_hbm_mass_production": "delayed; 2026 mass production unlikely (Digitimes 2026-04-21)",
         "hbm_channel_inventory_weeks": null,
         "trendforce_q2_2026_dram_contract_qoq_pct_low": 58,
@@ -148,15 +151,15 @@
         "individual_net_buy_krw_bn_0916kst": 1850.7,
         "vkospi_last_known": 60.07,
         "vkospi_last_known_date": "2026-05-06",
-        "usdkrw_overnight_close_0508": 1456.00,
-        "usdkrw_overnight_change_vs_seoul_close": 0.90,
+        "usdkrw_overnight_close_0508": 1456.0,
+        "usdkrw_overnight_change_vs_seoul_close": 0.9,
         "samsung_intraday_change_pct_recovery": "approx +2% (V-shaped recovery from -3.5% open)",
         "skhynix_intraday_change_pct_recovery": "approx +3% (V-shaped recovery from -3.14% open)"
       },
       "us_market_0507_close": {
         "sp500": 7337.11,
         "sp500_change_pct": -0.38,
-        "nasdaq": 25806.20,
+        "nasdaq": 25806.2,
         "nasdaq_change_pct": -0.13,
         "philadelphia_semi_change_pct": -2.7,
         "delta_vs_prev_snapshot": "no change (same 5/7 close data)"
@@ -178,7 +181,12 @@
       "hbm_signals": {
         "samsung_hbm4_status": "passed NVIDIA qual (2025-12); mass production began 2026-02; 30%+ NVIDIA HBM4 supply contract finalization stage",
         "skhynix_hbm4_status": "M15X fab first cleanroom completion in May 2026 with pilot operations (HBM3E + HBM4 production)",
-        "nvidia_hbm4_share_2026_bit_output": {"skhynix_pct": 50, "samsung_pct": 28, "skhynix_2025_pct": 59, "samsung_2025_pct": 20},
+        "nvidia_hbm4_share_2026_bit_output": {
+          "skhynix_pct": 50,
+          "samsung_pct": 28,
+          "skhynix_2025_pct": 59,
+          "samsung_2025_pct": 20
+        },
         "cxmt_hbm_mass_production": "delayed per Digitimes 2026-04-21 (primary source); secondary reports (Technetbook April) claim 12-layer HBM first mass production — conflicting",
         "hbm_channel_inventory_weeks": null,
         "trendforce_q2_2026_dram_contract_qoq_pct_low": 58,
@@ -210,7 +218,14 @@
           ]
         }
       ],
-      "explainer_panels_added": ["A_korea_market", "B_bigtech_capex", "C_bigtech_financial_health", "D_keyword_detection", "E_hbm_six_signals", "F_macro_geopolitics"]
+      "explainer_panels_added": [
+        "A_korea_market",
+        "B_bigtech_capex",
+        "C_bigtech_financial_health",
+        "D_keyword_detection",
+        "E_hbm_six_signals",
+        "F_macro_geopolitics"
+      ]
     },
     {
       "timestamp_utc": "2026-05-08T04:25:00Z",
@@ -227,10 +242,10 @@
       "foreign_net_buy_krw_bn_0916kst": -1753.7,
       "vkospi": 60.07,
       "vkospi_last_known_date": "2026-05-06",
-      "usd_krw": 1456.00,
-      "usdkrw_overnight_close_0508": 1456.00,
+      "usd_krw": 1456.0,
+      "usdkrw_overnight_close_0508": 1456.0,
       "samsung_price": 263000,
-      "samsung_intraday_low_pct": -3.50,
+      "samsung_intraday_low_pct": -3.5,
       "samsung_intraday_recovery_pct": "approx +2% (V-shaped recovery)",
       "samsung_close_5_7": 271500,
       "samsung_market_cap_trn_krw": 1507,
@@ -247,8 +262,8 @@
         "foreign_net_buy_krw_bn_0916kst": -1753.7,
         "vkospi_last_known": 60.07,
         "vkospi_last_known_date": "2026-05-06",
-        "usdkrw_overnight_close_0508": 1456.00,
-        "samsung_open_change_pct": -3.50,
+        "usdkrw_overnight_close_0508": 1456.0,
+        "samsung_open_change_pct": -3.5,
         "samsung_recovery_pct": "approx +2%",
         "skhynix_open_change_pct": -3.14,
         "skhynix_recovery_pct": "approx +3%"
@@ -256,7 +271,7 @@
       "us_market_0507_close": {
         "sp500": 7337.11,
         "sp500_change_pct": -0.38,
-        "nasdaq": 25806.20,
+        "nasdaq": 25806.2,
         "nasdaq_change_pct": -0.13,
         "philadelphia_semi_change_pct": -2.7,
         "delta_vs_prev_snapshot": "no change (same 5/7 close data)"
@@ -297,7 +312,14 @@
       "red_flags": [],
       "red_flags_triggered_24h": [],
       "summary": "5/8 장중 점심 시간대 갱신: KOSPI 약 -1.2%(7,399.31, 10:36 KST 기준)로 오전 저점 -2.13%에서 회복; 삼성·SK하이닉스 -3% 개장 후 V자 +2~3%; 외국인 매도 지속(-1.75조원); 24h 신규 RED FLAG 트리거 0건; 호르무즈는 진행 중·신규 격화 없음.",
-      "explainer_panels_added": ["A_korea_market", "B_bigtech_capex", "C_bigtech_financial_health", "D_keyword_detection", "E_hbm_six_signals", "F_macro_geopolitics"],
+      "explainer_panels_added": [
+        "A_korea_market",
+        "B_bigtech_capex",
+        "C_bigtech_financial_health",
+        "D_keyword_detection",
+        "E_hbm_six_signals",
+        "F_macro_geopolitics"
+      ],
       "file_structure_change": "Migrated to per-session snapshots: full dashboard now lives at snapshots/2026-05-08-0425UTC.html; index.html regenerated as session list."
     },
     {
@@ -306,7 +328,7 @@
       "session": "evening",
       "snapshot_path": "snapshots/2026-05-08-0801UTC.html",
       "note": "5/8 evening session: full close-of-day data. KOSPI 7,498.00 (+0.11%) — 4th consecutive record close. Foreigners -5.59T KRW (2nd day of >5T selling). Samsung -1.10% / SK hynix +1.93% diverged. Hyundai +7.17% on Boston Dynamics IPO expectations. Hormuz fire exchange continued macro risk but no NEW hardcoded triggers. 24h new (a)-(f) RED FLAG firings: 0.",
-      "kospi_close": 7498.00,
+      "kospi_close": 7498.0,
       "kospi_change_pct": 0.11,
       "kospi_change_pts": 7.95,
       "kospi_record_consecutive_days": 4,
@@ -320,7 +342,7 @@
       "usd_krw": null,
       "usd_krw_status": "approx mid-1450s; Seoul close 정확값 확인 필요. Overnight 5/8 morning 1456.00",
       "samsung_price": 268500,
-      "samsung_change_pct": -1.10,
+      "samsung_change_pct": -1.1,
       "samsung_prev_close_5_7": 271500,
       "samsung_market_cap_trn_krw_estimate": 1602,
       "sk_hynix_price": 1686000,
@@ -332,7 +354,7 @@
       "kia_price": 164500,
       "kia_change_pct": 4.38,
       "korea": {
-        "kospi_close": 7498.00,
+        "kospi_close": 7498.0,
         "kospi_change_pct": 0.11,
         "kospi_change_pts": 7.95,
         "kospi_record_consecutive_days": 4,
@@ -341,7 +363,7 @@
         "individual_net_buy_krw_bn": 3974.0,
         "institution_net_buy_krw_bn": 1549.0,
         "samsung_close": 268500,
-        "samsung_change_pct": -1.10,
+        "samsung_change_pct": -1.1,
         "skhynix_close": 1686000,
         "skhynix_change_pct": 1.93,
         "intraday_low_open_pct": -2.13,
@@ -349,9 +371,9 @@
       },
       "us_market_5_7_close": {
         "sp500": 7335.66,
-        "sp500_change_pct": -0.40,
+        "sp500_change_pct": -0.4,
         "sp500_change_pts": -29.46,
-        "nasdaq": 25801.20,
+        "nasdaq": 25801.2,
         "nasdaq_change_pct": -0.15,
         "nasdaq_change_pts": -32.75,
         "context": "S&P 500 retreated from record high; semiconductor/tech profit-taking; Arm Holdings supply concerns; Iran negotiation noise"
@@ -380,7 +402,12 @@
       "hbm_signals": {
         "samsung_hbm4_status": "passed NVIDIA qual (2025-12); 30%+ NVIDIA HBM4 supply contract finalization stage; Q2 2026 shipments expected; logic chip yield >90%, 1c DRAM yield ~50-60% (2026-02)",
         "skhynix_hbm4_status": "M15X fab first cleanroom completion in May 2026 with pilot operations (HBM3E + HBM4); 1b DRAM ~10K wafers/month from Feb scaling several-fold by year-end",
-        "hbm_market_share_2026_bit_output": {"skhynix_pct": 50, "samsung_pct": 28, "skhynix_2025_pct": 59, "samsung_2025_pct": 20},
+        "hbm_market_share_2026_bit_output": {
+          "skhynix_pct": 50,
+          "samsung_pct": 28,
+          "skhynix_2025_pct": 59,
+          "samsung_2025_pct": 20
+        },
         "samsung_hbm_capacity_2026_target_wafers_per_month": 250000,
         "samsung_hbm_capacity_current_wafers_per_month": 170000,
         "cxmt_hbm2_status": "mass production began 2026-04 ahead of telegraphed schedule (Tom's Hardware)",
@@ -394,11 +421,15 @@
         "trendforce_q1_2026_dram_contract_qoq_pct_actual": "90-95%",
         "trendforce_q2_2026_nand_contract_qoq_pct_high": 75,
         "rdimm_vs_hbm_pricing": "RDIMM contract prices have overtaken HBM (atypical) — TrendForce Apr.2026",
-        "sk_securities_2026_05_07_target_prices": {"samsung_target_krw": 500000, "skhynix_target_krw": 3000000, "note": "aggressive raise from prior 400K / 2M"}
+        "sk_securities_2026_05_07_target_prices": {
+          "samsung_target_krw": 500000,
+          "skhynix_target_krw": 3000000,
+          "note": "aggressive raise from prior 400K / 2M"
+        }
       },
       "macro": {
         "brent_usd_5_8": 101.26,
-        "brent_change_pct_5_8": 1.20,
+        "brent_change_pct_5_8": 1.2,
         "wti_usd_5_8": null,
         "wti_status_5_8": "approximately $96-97; CNBC reports $100 level recovery; exact close 확인 필요",
         "iran_us_status": "5/8 US-Iran fire exchange in Strait of Hormuz; both sides blame each other; Trump described strikes as 'love tap' insisting ceasefire holds; Iran reviewing US war-end proposal; ceasefire nominally in place but very fragile. NOT a NEW hardcoded RED FLAG trigger but ongoing macro risk.",
@@ -407,7 +438,124 @@
       "red_flags": [],
       "red_flags_triggered_24h": [],
       "summary": "5/8 evening 종가 기준: KOSPI 7,498.00(+0.11%) 4거래일 연속 종가 사상최고; 외국인 -5.59조 이틀 연속 5조+ 매도, 개인 +3.97조·기관 +1.55조 방어; 삼성 -1.10%(268,500) / SK하이닉스 +1.93%(1,686,000) 엇갈림; 현대차 +7.17% 매수주도 일시 이동; 호르무즈 화력교환에 개장 -2.13% → V자 회복; 24h 신규 RED FLAG 트리거 (a)-(f) 0건; CXMT HBM2 양산 보도(트리거 정의 외).",
-      "explainer_panels_added": ["A_korea_market", "B_bigtech_capex", "C_bigtech_financial_health", "D_keyword_detection", "E_hbm_six_signals", "F_macro_geopolitics"]
+      "explainer_panels_added": [
+        "A_korea_market",
+        "B_bigtech_capex",
+        "C_bigtech_financial_health",
+        "D_keyword_detection",
+        "E_hbm_six_signals",
+        "F_macro_geopolitics"
+      ]
+    },
+    {
+      "timestamp_utc": "2026-05-08T23:09:00Z",
+      "timestamp_kst": "2026-05-09 08:09 KST",
+      "session": "morning",
+      "snapshot_path": "snapshots/2026-05-08-2309UTC.html",
+      "note": "5/9 (토) morning · 한국 증시 휴장. 직전 거래일 5/8(금) 종가 + 5/8 미국 정규장 종가 + 매크로 업데이트. 미국 3대 지수 동반 사상최고치(S&P 7,398.93 +0.84%, 나스닥 26,247.08 +1.71%) — 4월 고용 골디락스 해석. 호르무즈 미·이란 교전 진행 중. 24h 신규 RED FLAG 발화 0건.",
+      "kospi_close": 7498.0,
+      "kospi_change_pct": 0.11,
+      "kospi_change_pts": 7.95,
+      "kospi_record_consecutive_days": 4,
+      "kospi_session_status": "5/9 토요일 휴장 — 5/8 금요일 종가 그대로",
+      "foreign_net_buy_krw": -5590000000000,
+      "foreign_net_buy_krw_bn": -5590.0,
+      "foreign_net_buy_2day_cumulative_krw_bn": -12758.0,
+      "individual_net_buy_krw_bn": 3974.0,
+      "institution_net_buy_krw_bn": 1549.0,
+      "vkospi": 60.07,
+      "vkospi_last_known_date": "2026-05-06",
+      "vkospi_5_8_status": "확인 필요 (신규 공시값 미확보)",
+      "usd_krw": null,
+      "usd_krw_status": "5/8 서울 종가 미드-1450원대 추정 · 정확값 확인 필요. 오버나잇 1456.00.",
+      "samsung_price": 268500,
+      "samsung_change_pct": -1.1,
+      "samsung_market_cap_trn_krw_estimate": 1602,
+      "sk_hynix_price": 1686000,
+      "sk_hynix_change_pct": 1.93,
+      "sk_hynix_market_cap_trn_krw_estimate": 1228,
+      "us_market_5_8_close": {
+        "sp500": 7398.93,
+        "sp500_change_pct": 0.84,
+        "nasdaq": 26247.08,
+        "nasdaq_change_pct": 1.71,
+        "context": "S&P + Nasdaq 동반 사상최고치. 4월 비농업 +115K (컨센서스 55~62K 상회) · 임금 상승률 둔화 → 골디락스 해석. 호르무즈 충돌·유가 변동성에도 위험선호 우위.",
+        "april_jobs_nonfarm": 115000,
+        "april_jobs_consensus": 60000,
+        "unemployment_rate": 4.3,
+        "wage_growth_yoy_pct": 3.6
+      },
+      "bigtech_capex_2026_guidance_usd_bn": {
+        "MSFT": 190,
+        "MSFT_component_cost_cited_usd_bn": 25,
+        "GOOGL_low": 180,
+        "GOOGL_high": 190,
+        "META_low": 125,
+        "META_high": 145,
+        "AMZN": 200,
+        "combined_total": 725,
+        "yoy_growth_pct": 77,
+        "delta_vs_prev_snapshot": "no change in 24h; next trigger Q2'26 earnings (2026-07)",
+        "hyperscaler_rpo_combined_usd_trn": 1.63
+      },
+      "bigtech_financial_health": {
+        "msft_5y_cds_bp": 41,
+        "amzn_5y_cds_bp": 58,
+        "orcl_5y_cds_bp": 125,
+        "hyperscaler_2026_debt_issuance_plan_usd_bn": 400,
+        "hyperscaler_2025_debt_issuance_actual_usd_bn": 165,
+        "delta_vs_prev_snapshot": "no new bond issuance / CDS event in 24h"
+      },
+      "hbm_signals": {
+        "samsung_hbm4_status": "passed NVIDIA qual (2025-12); 30%+ NVIDIA HBM4 supply contract finalization stage; Q2 2026 shipments expected; logic chip yield >90%, 1c DRAM yield ~50-60% (2026-02)",
+        "skhynix_hbm4_status": "11Gb/s test optimization ongoing; M15X fab first cleanroom completion in May 2026 with pilot operations (HBM3E + HBM4)",
+        "hbm_market_share_2026_bit_output": {
+          "skhynix_pct": 50,
+          "samsung_pct": 28,
+          "skhynix_2025_pct": 59,
+          "samsung_2025_pct": 20
+        },
+        "samsung_hbm_capacity_2026_target_wafers_per_month": 250000,
+        "samsung_hbm_capacity_current_wafers_per_month": 170000,
+        "cxmt_hbm2_status": "mass production began 2026-04 (existing fact, not new)",
+        "cxmt_hbm3_status": "Digitimes 2026-04-21: 2026 mass production unlikely; HBM3 timeline slipping; year-end 60K wafer/month line target",
+        "hbm_channel_inventory_weeks": null,
+        "hbm_channel_inventory_status": "approximately 2 months tight (per prior reports); new data not available; Micron 2026 HBM sold out",
+        "hbm3e_pricing_2026_contract_pct_increase": 20,
+        "trendforce_dram_bulletin_2026_05_06": "supplier inventories bottomed out; AI/server demand driving Q2 contract price hikes",
+        "trendforce_q2_2026_dram_contract_qoq_pct_low": 58,
+        "trendforce_q2_2026_dram_contract_qoq_pct_high": 63,
+        "trendforce_q1_2026_dram_contract_qoq_pct_actual": "90-95%",
+        "rdimm_vs_hbm_pricing": "RDIMM contract prices have overtaken HBM (atypical) — TrendForce Apr.2026",
+        "evertiq_2026_05_08": "Memory is no longer a commodity – the industry hasn't fully caught up",
+        "sk_securities_2026_05_07_target_prices": {
+          "samsung_target_krw": 500000,
+          "skhynix_target_krw": 3000000
+        }
+      },
+      "macro": {
+        "brent_usd_5_8_close": 101.73,
+        "brent_change_pct_5_8": 1.66,
+        "brent_intraday_high": 108.8,
+        "brent_intraday_low": 96.8,
+        "wti_usd_5_8": null,
+        "wti_status_5_8": "approximately $96-97; CNBC reports $100 level recovery; exact close 확인 필요",
+        "iran_us_status": "Day 70 of war / fragile ceasefire. 5/8 US destroyers transited Hormuz under fire; both sides traded blame. Trump 'love tap' comment, ceasefire still officially holding (Hegseth confirms). Iran reviewing US 14-point peace proposal (440kg 60% enriched uranium handover, 12-yr enrichment halt). Hormuz remains unopened. Ongoing macro risk; not a new RED FLAG (a)-(f) trigger.",
+        "trump_xi_summit": "Beijing 2026-05-14 / 2026-05-15 confirmed; agenda includes tariffs, rare earths, semiconductor export controls, AI, Taiwan, Iran oil. CNBC 5/8: Iran focus may delay tariff/rare-earth progress."
+      },
+      "us_april_2026_jobs_report": {
+        "release_date": "2026-05-08",
+        "nonfarm_payrolls_thousands": 115,
+        "consensus_thousands": 60,
+        "march_revised_thousands": 178,
+        "unemployment_rate_pct": 4.3,
+        "wage_growth_mom_pct": 0.2,
+        "wage_growth_yoy_pct": 3.6,
+        "interpretation": "골디락스 — 고용 견조하지만 임금 상승 둔화로 인플레 압력 완화. 미증시 위험선호 견인."
+      },
+      "red_flags": [],
+      "red_flags_triggered_24h": [],
+      "summary": "5/9(토) 08:09 KST morning: 한국 휴장. 5/8 KOSPI 7,498(+0.11%, 4일연속 사상최고) 외국인 -5.59조. 미증시 5/8 동반 사상최고(S&P 7,398.93 +0.84%, 나스닥 26,247.08 +1.71%) 4월 고용 골디락스. Brent $101.73 인트라데이 ±10% 변동(호르무즈 충돌). RED FLAG 6대 트리거 신규 발화 0건."
     }
   ]
 }
