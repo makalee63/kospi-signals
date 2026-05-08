@@ -59,6 +59,80 @@
         "trump_xi_summit": "Beijing 2026-05-14 / 2026-05-15"
       },
       "red_flags_triggered_24h": []
+    },
+    {
+      "timestamp_utc": "2026-05-08T02:05:00Z",
+      "timestamp_kst": "2026-05-08T11:05:00+09:00",
+      "session": "morning",
+      "note": "Intraday morning update (~20 min after first snapshot). Reflects 2026-05-08 KOSPI open (09:02 KST quote) and 2026-05-07 US close. New macro shock: US-Iran Strait of Hormuz strikes overnight 5/7-5/8.",
+      "korea": {
+        "kospi_intraday_0902kst": 7344.28,
+        "kospi_change_pct_intraday": -1.95,
+        "kospi_change_pts_intraday": -145.77,
+        "foreign_net_buy_krw_bn_0902kst": -999.7,
+        "foreign_net_buy_krw_bn_0916kst": -1753.7,
+        "individual_net_buy_krw_bn_0902kst": 1075.6,
+        "institution_net_buy_krw_bn_0902kst": -93.5,
+        "vkospi_last_known": 60.07,
+        "vkospi_last_known_date": "2026-05-06",
+        "usdkrw_open_0508": 1445.48,
+        "usdkrw_open_change_vs_0507": -3.12,
+        "samsung_intraday_change_pct": -3.50,
+        "skhynix_intraday_change_pct": -3.14,
+        "skhynix_close_krw_0507": 1654000
+      },
+      "us_market_0507_close": {
+        "sp500": 7337.11,
+        "sp500_change_pct": -0.38,
+        "nasdaq": 25806.20,
+        "nasdaq_change_pct": -0.13,
+        "philadelphia_semi_change_pct": -2.7
+      },
+      "bigtech_capex_2026_guidance_usd_bn": {
+        "MSFT": 190,
+        "GOOGL_low": 180,
+        "GOOGL_high": 190,
+        "META_low": 125,
+        "META_high": 145,
+        "AMZN": 200,
+        "combined_total": 725,
+        "yoy_growth_pct": 77,
+        "delta_vs_prev_snapshot": "no change"
+      },
+      "bigtech_financial_health": {
+        "delta_vs_prev_snapshot": "no new data in 24h; next trigger Q2'26 earnings (2026-07)"
+      },
+      "hbm_signals": {
+        "samsung_hbm4_status": "passed NVIDIA qual (2025-12); mass production began 2026-02; shipping to NVIDIA",
+        "skhynix_hbm4_status": "still optimizing for 11Gb/s test (per 2026-03 reports); mass-production line in place since Sept 2025",
+        "nvidia_hbm4_share": {"skhynix_pct": 70, "samsung_socamm2_pct": 50},
+        "cxmt_hbm_mass_production": "delayed; 2026 mass production unlikely (Digitimes 2026-04-21)",
+        "hbm_channel_inventory_weeks": null,
+        "trendforce_q2_2026_dram_contract_qoq_pct_low": 58,
+        "trendforce_q2_2026_dram_contract_qoq_pct_high": 63,
+        "rdimm_vs_hbm_pricing": "RDIMM contract prices have overtaken HBM (atypical) — TrendForce Apr.2026"
+      },
+      "macro": {
+        "brent_usd": 102.32,
+        "brent_change_pct": 2.26,
+        "wti_usd": 96.76,
+        "wti_change_pct": 2.06,
+        "iran_us_status": "Hormuz ceasefire under severe strain; US strikes Qeshm Island & Bandar Abbas overnight 5/7-5/8; Iran claims missile strike on US destroyers; Trump paused 'Operation Freedom' but considering resumption; Korean cargo ship Namu-ho towed to Dubai after explosion",
+        "trump_xi_summit": "Beijing 2026-05-14 / 2026-05-15; CNBC 5/8: Iran focus may delay tariff/rare-earth progress",
+        "sp500_close_0507": 7337.11
+      },
+      "red_flags_triggered_24h": [
+        {
+          "code": "macro_hormuz_escalation",
+          "description": "US-Iran ceasefire collapse risk; US strikes Bandar Abbas; oil +2.26%; KOSPI -1.95%; foreigners selling 1.75T KRW",
+          "note": "Not in the 6 hardcoded HBM/capex triggers, but logged as macro risk for continuity",
+          "sources": [
+            "https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html",
+            "https://www.newspim.com/news/view/20260508000037",
+            "https://www.mt.co.kr/world/2026/05/08/2026050806070632549"
+          ]
+        }
+      ]
     }
   ]
 }
