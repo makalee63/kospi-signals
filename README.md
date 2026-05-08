@@ -53,3 +53,7 @@
 ## 데이터 소스
 
 KRX · 네이버 금융 · 한경 · 이투데이 · 머니투데이 · 헤럴드경제 · 파이낸셜뉴스 · Bloomberg · Reuters · CNBC · Yahoo Finance · WSJ · FT · 각사 IR · TrendForce · SemiAnalysis · Counterpoint Research
+
+---
+
+마지막 갱신: 2026-05-08 23:09 UTC (2026-05-09 08:09 KST · morning · 토요일 휴장) · 누적 회차 수: 6회
