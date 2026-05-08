@@ -57,6 +57,20 @@
   .barwrap .num{font-size:12px;color:var(--muted);min-width:84px;text-align:right}
   footer{color:var(--muted);font-size:12px;margin-top:30px;text-align:center}
   code{background:var(--row-alt);padding:1px 5px;border-radius:4px;font-size:12.5px}
+
+  /* Explainer panels */
+  .explainer { margin: 12px 0 24px; border: 1px solid #d1d5db; border-radius: 8px; padding: 4px 14px; background: #f9fafb; }
+  .explainer summary { font-weight: 600; cursor: pointer; padding: 10px 0; color: #1f2937; }
+  .explainer summary:hover { color: #2563eb; }
+  .explainer-body { padding: 8px 4px 12px; line-height: 1.65; }
+  .explainer-body h4 { margin: 14px 0 6px; font-size: 14px; color: #111827; }
+  .explainer-body p { margin: 0 0 8px; color: #374151; font-size: 14px; }
+  @media (prefers-color-scheme: dark) {
+    .explainer { background: #1f2937; border-color: #374151; }
+    .explainer summary { color: #f3f4f6; }
+    .explainer-body h4 { color: #f9fafb; }
+    .explainer-body p { color: #d1d5db; }
+  }
 </style>
 </head>
 <body>
@@ -65,66 +79,94 @@
 <header>
   <h1>코스피 · 빅테크 · HBM 시그널 대시보드</h1>
   <div class="meta">
-    <span><b>마지막 업데이트:</b> 2026-05-08 02:05 UTC · 11:05 KST</span>
-    <span class="pill">Morning · 장중 인트라데이</span>
-    <span><b>직전 갱신과 간격:</b> 약 20분 (직전 10:45 KST · 5/7 종가 기반 → 본 회차 5/8 개장 후 데이터 반영)</span>
+    <span><b>마지막 업데이트:</b> 2026-05-08 02:16 UTC · 11:16 KST</span>
+    <span class="pill">Morning · 장중 인트라데이 (3차 회차)</span>
+    <span><b>직전 갱신과 간격:</b> 약 11분 (직전 11:05 KST → 본 회차 11:16 KST)</span>
   </div>
   <div class="meta" style="margin-top:6px">
-    <span>데이터 기준: 2026-05-08(금) KOSPI 오전(09:02 KST 인용) / 2026-05-07(목) 미국 종가</span>
+    <span>데이터 기준: 2026-05-08(금) KOSPI 오전 (09:16 KST 종합 인용) / 2026-05-08 새벽 NDF · USD/KRW 야간 종가 / 2026-05-07(목) 미국 종가</span>
   </div>
 </header>
 
 <!-- RED FLAG -->
 <div class="redflag">
   <h2>🚨 RED FLAG · 변곡점 시그널 (24시간)</h2>
-  <p style="margin:4px 0"><b class="ok">하드코딩된 6대 변곡점 시그널 중 신규 트리거 없음.</b> 다만 매크로 측면에서 <b>호르무즈 휴전 붕괴 위험</b> 신규 발생.</p>
+  <p style="margin:4px 0"><b class="ok">하드코딩된 6대 변곡점 시그널 중 신규 트리거 없음.</b> 매크로 측면에서 <b>호르무즈 휴전 위반 충돌 지속</b> · 美·이란 30일 임시 휴전안 협상 진행.</p>
   <ul>
-    <li>(a) 빅테크 capex 가이던스 동결/하향 — <b>NO</b>. 4/29~30 Q1'26 실적에서 4사 모두 상향 (2026 합산 ≈ $725B, +77% YoY). <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's Hardware</a></li>
-    <li>(b) 메모리·컴포넌트 비용을 capex 상향 사유로 더이상 인용하지 않음 — <b>NO</b>. MSFT CFO는 $25B를 메모리/컴포넌트 가격 상승분으로 명시, META는 "higher component costs" 인용. <a href="https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud">TNW Q1'26 정리</a></li>
-    <li>(c) "capacity constraint eased / resolved / 캐파 제약 해소" 표현 — <b>NO</b>. MSFT 4/29: "capacity constrained through 2026", Azure 미충족 백로그 $80B. <a href="https://introl.com/blog/hyperscaler-capex-690-billion-microsoft-azure-power-bottleneck-2026">Introl</a></li>
-    <li>(d) 삼성 HBM4 엔비디아 퀄리피케이션 통과 — <b>이미 통과 (2025-12) → 2026-02 양산 진입 → NVIDIA 출하 개시</b>. 신규 24h 시그널은 아니지만 진척도 가속. <a href="https://www.kedglobal.com/korean-chipmakers/newsView/ked202603080004">KED Global</a> · <a href="https://www.trendforce.com/news/2026/03/09/news-samsung-sk%E2%80%AFhynix-reportedly-tapped-as-nvidia-rubin-hbm4-suppliers-shipments-could-start-in-march/">TrendForce</a></li>
-    <li>(e) 중국 CXMT HBM 양산 진입 — <b>NO</b>. Digitimes 4/21: 2026 HBM3 양산 "unlikely". 60K wpm (전체 20%) 캐파 계획은 유지. <a href="https://www.digitimes.com/news/a20260421PD230/cxmt-hbm3-dram-production-2026.html">Digitimes</a></li>
-    <li>(f) HBM 채널 재고 위크 수 4주 초과 — <b>데이터 미확인</b>. TrendForce 5/6 DRAM Bulletin "supplier inventories bottomed out" → 오히려 재고 소진 국면. <a href="https://www.trendforce.com/research/download/RP260506QK">TrendForce</a></li>
+    <li>(a) 빅테크 capex 가이던스 동결/하향 — <b>NO</b>. 4/29~30 Q1'26 실적에서 4사 모두 상향 (2026 합산 ≈ $725B, +77% YoY). 다음 분기 트리거는 7월. <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's Hardware</a></li>
+    <li>(b) 메모리·컴포넌트 비용을 capex 상향 사유로 더이상 인용하지 않음 — <b>NO</b>. MSFT CFO는 $25B를 메모리/컴포넌트 가격 상승분으로 명시, META는 "higher component costs" 인용 중. <a href="https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud">TNW Q1'26 정리</a></li>
+    <li>(c) "capacity constraint eased / resolved / 캐파 제약 해소" 표현 — <b>NO</b>. MSFT 4/29: "capacity constrained through 2026", Azure 미충족 백로그 $80B 유지. <a href="https://introl.com/blog/hyperscaler-capex-690-billion-microsoft-azure-power-bottleneck-2026">Introl</a></li>
+    <li>(d) 삼성 HBM4 엔비디아 퀄리피케이션 통과 — <b>이미 통과 (2025-12) → 2026-02 양산 → NVIDIA 출하 진행. Samsung은 NVIDIA HBM4 30%+ 공급 협상 마무리 단계 (Digitimes)</b>. 이미 알려진 사실, 신규 24h 트리거 아님. <a href="https://www.digitimes.com/news/a20251216PD218/hbm4-samsung-nvidia-2026-sk-hynix.html">Digitimes</a> · <a href="https://www.trendforce.com/news/2026/03/09/news-samsung-sk%E2%80%AFhynix-reportedly-tapped-as-nvidia-rubin-hbm4-suppliers-shipments-could-start-in-march/">TrendForce</a></li>
+    <li>(e) 중국 CXMT HBM 양산 진입 — <b>NO (보고 엇갈림)</b>. Digitimes 4/21 메인 보도: 2026 HBM3 양산 "unlikely". 다만 Technetbook 4월 보도는 "12-layer HBM 첫 대량 생산 진입" 주장. 1차 매체 신뢰도 우선. <a href="https://www.digitimes.com/news/a20260421PD230/cxmt-hbm3-dram-production-2026.html">Digitimes</a></li>
+    <li>(f) HBM 채널 재고 위크 수 4주 초과 — <b>NO</b>. TrendForce 5/6 DRAM Bulletin: "supplier inventories bottomed out". HBM3E 2026 계약가 +20%, 일반 DRAM Q2'26 +58~63% QoQ — 공급 타이트 지속. <a href="https://www.trendforce.com/research/download/RP260506QK">TrendForce</a> · <a href="https://www.tomshardware.com/pc-components/dram/dram-and-nand-contract-prices-to-climb-again-in-q2">Tom's HW</a></li>
   </ul>
-  <div class="warn"><b>⚠ 신규 매크로 위험 (5/7 야간 → 5/8 개장):</b> 美·이란 호르무즈 해협 충돌 재발. 美 폭스뉴스: 美軍이 케슘섬 항구·반다르아바스 공습. 이란 IRIB: 美 부대 미사일 피격 후 도주 주장. 트럼프, "Operation Freedom" 일시 중단 후 재개 검토. 한국 화물선 '나무호' 두바이 항구 예인. 결과: 코스피 -1.95%, 외국인 순매도 9,997억원(09:02), 1조7,537억원(09:16)으로 확대. 브렌트유 +2.26% → $102.32. 메모리/HBM 펀더멘털 변경 아님 — 단기 차익실현 트리거. <a href="https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html">CNBC 5/8</a> · <a href="https://www.newspim.com/news/view/20260508000037">뉴스핌 5/8</a></div>
+  <div class="warn"><b>⚠ 매크로 위험 지속 (5/8 야간 → 5/8 오전):</b> 美·이란 호르무즈 해협 충돌 재발 후 양측 모두 휴전 위반 주장. 美 CENTCOM 5/7: 美軍이 호르무즈 통과 중 이란 공격 저지, 자위 차원 반격. 이란: 美가 호르무즈 선박·민간 지역 공격 주장. 美·이란 1쪽 분량 14항목 MOU 추진(호르무즈 30일 휴전 + 우라늄 농축 20년 중단). 결과: KOSPI 09:16 KST -2.13% (7,330.56), 외국인 -1조7,537억 / 기관 -1,223억 / 개인 +1조8,507억. USD/KRW 야간 종가 1,456.00 (+0.90원). 메모리/HBM 펀더멘털 변경 아님 — 단기 차익실현·매크로 헤지 트리거. <a href="https://www.fnnews.com/news/202605080537466681">파이낸셜뉴스 5/8 새벽</a> · <a href="https://www.fnnews.com/news/202605080833528397">FN 5/8 08:33</a> · <a href="https://www.newspim.com/news/view/20260508000209">뉴스핌 5/8</a> · <a href="https://www.blockmedia.co.kr/archives/1089145">블록미디어 USD/KRW</a></div>
 </div>
 
 <!-- A. 한국 시장 -->
 <section>
-  <h2>A. 한국 시장 시황 <span class="sub">2026-05-08(금) 09:02 KST 시점 인용 · 장중</span></h2>
+  <h2>A. 한국 시장 시황 <span class="sub">2026-05-08(금) 09:16 KST 시점 인용 · 장중</span></h2>
   <table>
     <thead><tr><th>지표</th><th>현재값</th><th>전일대비 변화</th><th>출처</th></tr></thead>
     <tbody>
-      <tr><td>코스피 (09:02 KST)</td><td class="num">7,344.28</td><td class="num down">-145.77 (-1.95%)</td><td><a href="https://www.mt.co.kr/stock/2026/05/08/2026050609020028346">머니투데이</a> · <a href="https://biz.heraldcorp.com/article/10733480">헤럴드경제</a></td></tr>
-      <tr><td>외국인 순매수 (09:16 KST 누적)</td><td class="num down">-1조 7,537억원</td><td class="num down">전일 -7.17조 → 4거래일 연속 매도</td><td><a href="https://www.fnnews.com/news/202605080916260559">파이낸셜뉴스</a> · <a href="https://newsroom.koscom.co.kr/">KRX 공시</a> <span class="src">(공식 종합 데이터 종가 기준 확인 필요)</span></td></tr>
-      <tr><td>개인 / 기관 (09:02 KST)</td><td class="num up">+1조 756억 / -935억원</td><td class="num">개인 매수 우위</td><td><a href="https://www.mt.co.kr/stock/2026/05/08/2026050609020028346">머니투데이</a></td></tr>
-      <tr><td>VKOSPI</td><td class="num"><span class="nodata">5/7·5/8 신규 수치 미확인</span> (직전 60.07 · 5/6)</td><td class="num">상승 압력 — 호르무즈 충격</td><td><a href="https://www.seoul.co.kr/news/economy/2026/05/06/20260506500200">서울신문 5/6</a></td></tr>
-      <tr><td>원/달러 환율 (5/8 개장)</td><td class="num">1,445.48원</td><td class="num up">-3.1원 (5/7 개장 1,448.6 대비)</td><td><a href="https://www.smbs.biz/ExRate/StdExRate.jsp">신한은행 매매기준율</a> <span class="src">· 종가 확인 필요</span></td></tr>
-      <tr><td>삼성전자 (5/8 09:02)</td><td class="num down">약 -3.50%</td><td class="num down">전일 시총 1,507조 → 약 1,455조 추정</td><td><a href="https://www.etoday.co.kr/news/view/2582629">이투데이</a></td></tr>
-      <tr><td>SK하이닉스 (5/8 09:02)</td><td class="num down">약 -3.14%</td><td class="num down">5/7 종가 1,654,000원 → 약 1,602,000원대 추정</td><td><a href="https://www.etoday.co.kr/news/view/2582629">이투데이</a></td></tr>
+      <tr><td>코스피 (09:16 KST)</td><td class="num">7,330.56</td><td class="num down">-159.49 (-2.13%)</td><td><a href="https://biz.heraldcorp.com/article/10733480">헤럴드경제</a> · <a href="https://www.newspim.com/news/view/20260508000209">뉴스핌 5/8</a></td></tr>
+      <tr><td>외국인 순매수 (09:16 KST 누적)</td><td class="num down">-1조 7,537억원</td><td class="num down">5/7 -7.17조 → 5거래일 연속 매도 압력</td><td><a href="https://www.fnnews.com/news/202605080916260559">파이낸셜뉴스</a> <span class="src">(KRX 종가 종합치는 장 마감 후 확인)</span></td></tr>
+      <tr><td>기관 / 개인 (09:16 KST)</td><td class="num">기관 -1,223억 / 개인 +1조 8,507억원</td><td class="num up">개인 매수 우위 — 수급 방어</td><td><a href="https://www.newspim.com/news/view/20260508000209">뉴스핌</a></td></tr>
+      <tr><td>VKOSPI</td><td class="num"><span class="nodata">5/7~5/8 신규 수치 미확인</span> (직전 60.07 · 5/6)</td><td class="num">상승 압력 (호르무즈 충격 지속)</td><td><a href="https://kr.investing.com/indices/kospi-volatility">Investing.com VKOSPI</a></td></tr>
+      <tr><td>원/달러 (5/8 야간 종가)</td><td class="num">1,456.00원</td><td class="num down">+0.90원 (서울 종가 대비)</td><td><a href="https://www.blockmedia.co.kr/archives/1089145">블록미디어 야간거래</a></td></tr>
+      <tr><td>삼성전자 (5/8 09:16 KST)</td><td class="num up">반등 +2%대</td><td class="num">개장 -3.5% → 회복</td><td><a href="https://www.newspim.com/news/view/20260508000209">뉴스핌</a></td></tr>
+      <tr><td>SK하이닉스 (5/8 09:16 KST)</td><td class="num up">반등 +3%대</td><td class="num">개장 -3.1% → 회복</td><td><a href="https://www.newspim.com/news/view/20260508000209">뉴스핌</a></td></tr>
     </tbody>
   </table>
-  <div class="warn"><b>요약:</b> 5/7(목) 마감 후 호르무즈 충돌 재격화 → 미 필라델피아 반도체 지수 -2.7%. 5/8 한국 개장 직후 반도체 주도 매도 (외국인 -1조7,500억). <b>구조적 메모리 사이클 약화는 아님</b>: SK증권 5/7 목표주가 50만전자/300만닉스, TrendForce Q2 DRAM +58~63% 상승 전망 등 펀더멘털은 견고. 단기 매크로 차익실현 압력으로 해석. <a href="https://www.mt.co.kr/stock/2026/05/07/2026050709584928346">머니투데이</a></div>
+  <div class="warn"><b>장중 패턴 변화:</b> 09:02 KST 코스피 -1.95% → 09:16 KST -2.13%로 추가 하락 후, 동시간대 삼성·하이닉스는 <b>저가매수에 -3% → +2~3%로 V자 반등</b>. 외국인 -1조7,537억 매도 vs 개인 +1조8,507억 매수 정면 충돌. <b>구조적 메모리 사이클 약화 신호 없음</b>: SK증권 5/7 목표 50만전자/300만닉스, TrendForce Q2 DRAM +58~63% 상승 전망 견고. 단기 매크로 차익실현 압력으로 해석. <a href="https://www.mt.co.kr/stock/2026/05/07/2026050709584928346">머니투데이 SK증권 리포트</a></div>
+
+  <details class="explainer">
+    <summary>ℹ️ 이 지표는 무엇을 의미하나요? 왜 보나요? 코스피에 어떤 영향이 있나요?</summary>
+    <div class="explainer-body">
+      <h4>📊 무엇을 보고 있나</h4>
+      <p>코스피 종가·등락률, 외국인 순매수(외국인 투자자가 그날 한국 주식을 얼마나 사고 팔았는지), VKOSPI(한국형 변동성 지수, 옵션 가격에 반영된 시장의 공포 수준), 원/달러 환율, 삼성전자·SK하이닉스 가격과 시총.</p>
+      <h4>🎯 왜 이 지표를 추적하나</h4>
+      <p>코스피의 단기 방향성은 외국인 수급에 크게 의존합니다. 외국인 순매수와 환율은 글로벌 자금 흐름의 단서입니다. 삼성전자와 SK하이닉스 두 종목이 코스피 시총의 약 1/3을 차지하므로, 두 종목의 움직임이 곧 지수의 결을 결정합니다. VKOSPI는 시장이 가격에 반영하기 시작한 변동성 인식의 척도입니다.</p>
+      <h4>🇰🇷 코스피에 어떻게 영향을 미치나</h4>
+      <p>외국인이 매수에서 매도로 전환하면 단기 조정 가능성↑. 환율이 단기간에 큰 폭으로 약세(원화 약세)로 가면 외국인 자금 회수 압력↑이 발생합니다. VKOSPI 급등은 헤지 수요와 변동성 거래 증가를 의미하며, 단기 변동폭이 커지는 환경입니다. 삼성·하이닉스 주가가 동반 하락하는 날은 산술적으로 코스피의 1차 하방 압력으로 직결됩니다.</p>
+      <h4>📌 오늘의 맥락</h4>
+      <p>오늘처럼 외국인이 1.7조원대 순매도하는 와중에 개인이 1.8조원대 받아낸 날은 통상 "수급 충돌형 변동성 장세"로 분류됩니다. 5/7에도 외국인 -7.17조 사상 최대 매도를 개인·기관이 흡수하며 사상 최고치를 마감했던 직후라, 5/8 추가 매도는 기술적 추격이지만 동력은 약화되는 단계로 해석할 수 있습니다. 삼성·하이닉스가 개장 -3%대에서 +2~3%로 V자 회복한 점도 외국인 매도에 비해 펀더멘털 신뢰가 살아있다는 신호입니다.</p>
+    </div>
+  </details>
 </section>
 
 <!-- B. 빅테크 capex 시그널 -->
 <section>
-  <h2>B. 미국 빅테크 capex 시그널 <span class="sub">2026-05-07(목) 종가</span></h2>
+  <h2>B. 미국 빅테크 capex 시그널 <span class="sub">2026-05-07(목) 종가 기반</span></h2>
   <table>
     <thead><tr><th>티커</th><th>2026 capex 가이던스</th><th>다음 실적</th><th>최근 24h capex 코멘트</th></tr></thead>
     <tbody>
       <tr><td><b>MSFT</b></td><td class="num">$190B (vs $152B 컨센)</td><td>2026-07 (FY26 Q4)</td><td>신규 IR 코멘트 없음. 4/29 발언 유효: "capacity constrained through 2026", $25B 메모리·컴포넌트 가격 인상분. <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's HW</a></td></tr>
       <tr><td><b>GOOGL</b></td><td class="num">$180–190B (4/29 상향)</td><td>2026-07 (Q2'26)</td><td>신규 코멘트 없음. 클라우드 백로그 $462B (+QoQ 약 2배), Cloud 매출 +63% YoY. <a href="https://thenextweb.com/news/alphabet-amazon-meta-q1-2026-earnings-ai-cloud">TNW</a></td></tr>
-      <tr><td><b>META</b></td><td class="num">$125–145B (4/30 상향)</td><td>2026-07 (Q2'26)</td><td>신규 코멘트 없음. 5/1 $25B 채권 발행 완료 (가산 ~T+180bp, 주문 $96B). <a href="https://www.bloomberg.com/news/articles/2026-04-30/meta-kicks-off-bond-offering-after-boosting-spending-outlook">Bloomberg</a></td></tr>
+      <tr><td><b>META</b></td><td class="num">$125–145B (4/30 상향)</td><td>2026-07 (Q2'26)</td><td>신규 코멘트 없음. 5/1 $25B 채권 발행 완료 (가산 ~T+180bp, 주문 $96B vs 직전 $125B 약화). <a href="https://www.bloomberg.com/news/articles/2026-04-30/meta-kicks-off-bond-offering-after-boosting-spending-outlook">Bloomberg</a></td></tr>
       <tr><td><b>AMZN</b></td><td class="num">~$200B</td><td>2026-07 (Q2'26)</td><td>5/7 종가 약세 (S&P 하락 주도). FCF 압박 우려 지속 (Q1 $1.2B vs 전년 $26B). <a href="https://www.thestreet.com/latest-news/stock-market-today-may-7-2026-updates">TheStreet 5/7</a></td></tr>
     </tbody>
   </table>
   <ul style="margin-top:10px">
-    <li><b>5/7 미국 종가:</b> S&P 500 7,337.11 (-0.38%), Nasdaq 25,806.20 (-0.13%), 필라델피아 반도체 -2.7%. AMZN·반도체 약세가 지수 하락 주도. <a href="https://www.cnbc.com/2026/05/06/stock-market-today-live-updates.html">CNBC 5/7</a></li>
-    <li><b>합산 2026 capex ≈ $725B (+77% YoY)</b>. 사이클 정점 신호 없음. <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's Hardware</a></li>
+    <li><b>5/7 미국 종가:</b> S&P 500 7,337.11 (-0.38%), Nasdaq 25,806.20 (-0.13%), 필라델피아 반도체 -2.7%. AMZN·반도체 약세가 지수 하락 주도. 5/8 신규 종가 데이터는 美 정규장 미개장. <a href="https://www.cnbc.com/2026/05/06/stock-market-today-live-updates.html">CNBC 5/7</a></li>
+    <li><b>합산 2026 capex ≈ $725B (+77% YoY)</b>. 사이클 정점 신호 없음. 다음 검증은 Q2'26 실적(7월). <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion">Tom's Hardware</a></li>
     <li><b>클라우드 백로그:</b> Alphabet $462B (+QoQ 약 2배), Microsoft Azure 미충족 $80B. <a href="https://introl.com/blog/hyperscaler-capex-690-billion-microsoft-azure-power-bottleneck-2026">Introl</a></li>
-    <li><b>4사 정확 5/7 종가:</b> <span class="nodata">티커별 종가/등락률 단일 출처 미확인</span> — 다음 회차 보완.</li>
+    <li><b>4사 정확 5/7 종가:</b> <span class="nodata">티커별 종가/등락률 단일 출처 미확인</span> — Yahoo/Google Finance 직접 조회 권장.</li>
   </ul>
+
+  <details class="explainer">
+    <summary>ℹ️ 이 지표는 무엇을 의미하나요? 왜 보나요? 코스피에 어떤 영향이 있나요?</summary>
+    <div class="explainer-body">
+      <h4>📊 무엇을 보고 있나</h4>
+      <p>MSFT/GOOGL/META/AMZN의 자본지출(capex) 가이던스 — AI 데이터센터, GPU, HBM 메모리, 전력 인프라에 "올해/내년에 얼마를 쓰겠다"는 공식 약속. 다음 실적 발표 일정과 함께 추적합니다.</p>
+      <h4>🎯 왜 이 지표를 추적하나</h4>
+      <p>빅테크 capex는 한국 메모리 회사(특히 SK하이닉스, 삼성전자)의 매출과 가격결정력의 1차 동인입니다. 빅테크가 capex를 올리는 이유로 "메모리 가격 상승"을 인용한다는 것 자체가 한국 메모리 슈퍼사이클을 정당화하는 가장 강력한 신호입니다. 클라우드 계약 백로그는 미래 매출 가시성의 지표로, 백로그가 늘면 capex 지속 가능성도 함께 상향됩니다.</p>
+      <h4>🇰🇷 코스피에 어떻게 영향을 미치나</h4>
+      <p>capex 가이던스 상향 → 한국 메모리 매출·이익 전망 상향 → 삼성·하이닉스 주가 상승 → 코스피 직접 견인. 반대로 가이던스 동결·하향은 메모리 사이클 정점 신호로 해석되어 코스피의 1차 엔진을 끕니다. 본 대시보드에서 가장 결정적 단일 지표 그룹입니다.</p>
+      <h4>📌 오늘의 맥락</h4>
+      <p>오늘은 빅테크 신규 capex 코멘트가 없는 "조용한 날"입니다. 다만 5/7 미국 시장에서 필라델피아 반도체가 -2.7% 하락했음에도 불구하고, 4월 말 Q1'26 실적에서 4사 모두 capex를 상향한 사실은 변함이 없습니다. 다음 검증 시점이 2026-07 Q2'26 실적이라는 점에서, 이번 7월 콜의 워딩이 향후 한국 메모리 슈퍼사이클 지속 여부를 가름하는 가장 중요한 단일 이벤트가 됩니다.</p>
+    </div>
+  </details>
 </section>
 
 <!-- C. 빅테크 재무 건전성 -->
@@ -158,6 +200,20 @@
     <li>Capex/매출 회수 비율: 4사 모두 1.0 미만 (capex가 직접매출 초과) — 구조적 외부자금 의존. <a href="https://tomtunguz.com/2026-04-29-the-112-billion-quarter-hyperscalers-bet-the-farm-on-ai/">Tom Tunguz</a></li>
   </ul>
   <p class="src">신규 24h 코멘트: <b>없음</b>. 다음 트리거는 Q2'26 실적(2026-07).</p>
+
+  <details class="explainer">
+    <summary>ℹ️ 이 지표는 무엇을 의미하나요? 왜 보나요? 코스피에 어떤 영향이 있나요?</summary>
+    <div class="explainer-body">
+      <h4>📊 무엇을 보고 있나</h4>
+      <p>분기 잉여현금흐름(FCF), 영업현금흐름 대비 capex 비율, 신규 채권 발행 규모, AI 자산 감가상각 누적 부담, CDS 스프레드(채권 디폴트 보험 비용 — 시장이 보는 부도 위험), AI 관련 매출 성장률.</p>
+      <h4>🎯 왜 이 지표를 추적하나</h4>
+      <p>지금 빅테크는 자기 영업현금흐름으로 capex를 감당하지 못하는 영역으로 진입하고 있습니다. FCF가 마이너스로 전환하거나 채권 발행이 급증하면, 시장은 capex의 지속 가능성을 의심하기 시작합니다. CDS 스프레드 상승은 채권 시장의 가장 빠른 경고음입니다. 5대 하이퍼스케일러는 2030년까지 약 2조 달러의 AI 자산을 대차대조표에 추가할 계획이고, 연 20% 감가상각을 가정하면 연간 4,000억 달러의 비용 압박이 발생합니다.</p>
+      <h4>🇰🇷 코스피에 어떻게 영향을 미치나</h4>
+      <p>빅테크 자금 조달 비용↑ → 향후 capex 페이스 하향 압력↑ → 한국 메모리 매출 전망↓ → 삼성·하이닉스 시총 약 2,700조원에 비대칭적 충격. 즉 한국 시장 입장에서 "빅테크 재무 건전성"은 사실상 한국 반도체 회사의 수요 곡선과 동의어입니다.</p>
+      <h4>📌 오늘의 맥락</h4>
+      <p>오늘은 24시간 신규 데이터가 없는 정체 구간입니다. 가장 최근 시그널인 META의 5/1 $25B 채권 주문강도 약화($125B → $96B)와 ORCL CDS >125bp는 여전히 유효한 경고등이며, 다음 신규 데이터 포인트는 7월 Q2'26 실적까지 두 달 가량 비어 있습니다. 이 공백기에 매크로 충격이 겹치면 "재무 건전성 우려가 표면화하는 첫 트리거"로 작동할 수 있는 환경입니다.</p>
+    </div>
+  </details>
 </section>
 
 <!-- D. 변곡점 키워드 -->
@@ -184,6 +240,20 @@
     </tbody>
   </table>
   <p class="src" style="margin-top:6px">셋 모두 출현 시 ↔ 사이클 정점 가까움 신호. 현재 0/3.</p>
+
+  <details class="explainer">
+    <summary>ℹ️ 이 지표는 무엇을 의미하나요? 왜 보나요? 코스피에 어떤 영향이 있나요?</summary>
+    <div class="explainer-body">
+      <h4>📊 무엇을 보고 있나</h4>
+      <p>빅테크 IR·실적 콜·애널리스트 리포트에서 다음 세 표현의 출현 여부 — (1) "guidance unchanged/maintained/가이던스 동결", (2) capex 상향 사유로 "메모리 가격/컴포넌트 비용"을 더 이상 인용하지 않음, (3) "capacity constraint eased/resolved/캐파 제약 해소".</p>
+      <h4>🎯 왜 이 지표를 추적하나</h4>
+      <p>메모리 사이클은 항상 미세한 언어적 변화로 먼저 신호합니다. CFO들의 워딩이 바뀌는 시점이 숫자가 바뀌기 1~2분기 앞섭니다. 이 세 가지는 capex 사이클의 정점·전환을 시사하는 가장 빠른 lead indicator입니다. 시장 컨센서스가 가장 낙관적일 때 첫 출현이 가장 위험합니다.</p>
+      <h4>🇰🇷 코스피에 어떻게 영향을 미치나</h4>
+      <p>위 세 키워드 중 하나라도 출현하면 "한국 메모리 슈퍼사이클의 끝이 시야에 들어왔다"는 시장 해석이 즉시 활성화됩니다. 통상 그 발표 직후 24~72시간 내 외국인 차익실현 매도와 삼성·하이닉스 6~8% 급락이 동반될 가능성이 높습니다. 이게 코스피 7,400 돌파 이후 가장 위험한 단일 이벤트 패턴입니다.</p>
+      <h4>📌 오늘의 맥락</h4>
+      <p>오늘 기준 3개 키워드 모두 0/3 출현 — 즉 메모리 사이클의 lead indicator는 여전히 "사이클 지속" 시그널을 보내고 있습니다. 다만 5/8 KOSPI -2.13% 하락 자체는 이 키워드와 무관한 매크로 충격이라는 점에서, 향후 7월 빅테크 Q2 실적 콜에서 워딩이 어떻게 변하는지가 코스피의 진짜 변곡점이 될 것입니다.</p>
+    </div>
+  </details>
 </section>
 
 <!-- E. HBM 6대 시그널 -->
@@ -192,15 +262,29 @@
   <table>
     <thead><tr><th>시그널</th><th>현재 상태</th><th>마지막 업데이트</th><th>출처</th></tr></thead>
     <tbody>
-      <tr><td>1. HBM4 수율 진척</td><td>삼성: 2026-02 양산 진입, 최종 퀄 통과 후 <b>대량 주문</b>으로 전환. SK하이닉스: 11Gb/s 테스트 통과 위한 최적화 중 (3월 보고)</td><td>2026-03 / 2026-02</td><td><a href="https://www.kedglobal.com/korean-chipmakers/newsView/ked202603080004">KED Global</a> · <a href="https://www.trendforce.com/news/2026/03/09/news-samsung-sk%E2%80%AFhynix-reportedly-tapped-as-nvidia-rubin-hbm4-suppliers-shipments-could-start-in-march/">TrendForce 3/9</a></td></tr>
-      <tr><td>2. 삼성 NVIDIA HBM4 퀄 통과</td><td><b class="up">통과 (2025-12) → 2026-02 양산 → NVIDIA 출하 진행 중. SK하이닉스가 약 70% 점유, 삼성은 SOCAMM 2세대 50% 공급</b></td><td>진행 중</td><td><a href="https://www.trendforce.com/news/2026/01/28/news-sk-hynix-reportedly-to-supply-about-two-thirds-of-nvidia-hbm4-samsung-targets-early-delivery/">TrendForce 1/28</a></td></tr>
-      <tr><td>3. CXMT HBM 양산 진입</td><td><b class="down">지연 — Digitimes 4/21: "2026 양산 unlikely"</b>. 60K wpm (전체 20%) 캐파 계획은 유지. 16nm-class G4 DRAM 공정 채택</td><td>2026-04-21</td><td><a href="https://www.digitimes.com/news/a20260421PD230/cxmt-hbm3-dram-production-2026.html">Digitimes</a> · <a href="https://www.tomshardware.com/pc-components/dram/chinese-semiconductor-industry-gears-up-for-domestic-hbm3-production-by-the-end-of-2026-cxmt-to-produce-chips-while-naura-maxwell-and-u-preseason-design-tools-for-assembly">Tom's HW</a></td></tr>
-      <tr><td>4. 채널 재고 위크 수</td><td><span class="nodata">정확 수치 미공개</span>. TrendForce 5/6 Bulletin: "supplier inventories bottomed out" — 4주 초과 시그널 <b>아님</b></td><td>2026-05-06</td><td><a href="https://www.trendforce.com/research/download/RP260506QK">TrendForce DRAM Bulletin 5/6</a></td></tr>
-      <tr><td>5. 메모리 현물가/계약가</td><td>HBM3E 2026 계약가 +20%. <b>일반 DRAM Q2'26 계약가 +58~63% QoQ 전망</b>. SK·CXMT는 5월 중 최종 협상 마무리 예정. RDIMM 가격이 HBM 추월 (이례적)</td><td>2026-04-30 / 진행</td><td><a href="https://www.trendforce.com/presscenter/news/20260331-12995.html">TrendForce 3/31</a> · <a href="https://www.trendforce.com/research/download/RP260430QO">DRAM Contract Apr.'26</a></td></tr>
-      <tr><td>6. 신규 IB·리서치 보고서</td><td>SK증권 5/7: 삼성 50만 / SK하이닉스 300만 (P/B → P/E 전환). 골드만/모건 5/7~5/8 신규 코멘트 <span class="nodata">확인 필요</span></td><td>2026-05-07</td><td><a href="https://www.mt.co.kr/stock/2026/05/07/2026050709584928346">머니투데이</a> · <a href="https://www.news1.kr/finance/general-stock/6159562">뉴스1</a></td></tr>
+      <tr><td>1. HBM4 수율 진척</td><td>삼성: 2026-02 양산 진입, 최종 퀄 통과 후 <b>대량 주문</b>으로 전환. SK하이닉스: M15X 팹 첫 클린룸 5월 완공 + 시범 가동 (HBM3E·HBM4 모두 생산)</td><td>2026-05 / 2026-02</td><td><a href="https://www.kedglobal.com/korean-chipmakers/newsView/ked202603080004">KED Global</a> · <a href="https://www.trendforce.com/news/2026/03/09/news-samsung-sk%E2%80%AFhynix-reportedly-tapped-as-nvidia-rubin-hbm4-suppliers-shipments-could-start-in-march/">TrendForce 3/9</a></td></tr>
+      <tr><td>2. 삼성 NVIDIA HBM4 퀄 통과</td><td><b class="up">통과 (2025-12) → 2026-02 양산 → NVIDIA HBM4 30%+ 공급 협상 마무리 단계. 2026 전체 HBM 비트 점유: SK하이닉스 50% (vs 2025 59%), 삼성 28% (vs 2025 20%) — 삼성 점유율 확대 진행 중</b></td><td>진행 중</td><td><a href="https://www.digitimes.com/news/a20251216PD218/hbm4-samsung-nvidia-2026-sk-hynix.html">Digitimes 12/16</a> · <a href="https://www.trendforce.com/news/2026/01/28/news-sk-hynix-reportedly-to-supply-about-two-thirds-of-nvidia-hbm4-samsung-targets-early-delivery/">TrendForce 1/28</a></td></tr>
+      <tr><td>3. CXMT HBM 양산 진입</td><td><b class="down">지연 (1차 매체 기준)</b> — Digitimes 4/21: "2026 양산 unlikely". 60K wpm (전체 20%) 캐파 계획은 유지. 2차 매체(Technetbook 4월)는 12-layer HBM 첫 양산 진입 주장 — 보고 엇갈림</td><td>2026-04-21</td><td><a href="https://www.digitimes.com/news/a20260421PD230/cxmt-hbm3-dram-production-2026.html">Digitimes</a> · <a href="https://www.tomshardware.com/pc-components/dram/chinese-semiconductor-industry-gears-up-for-domestic-hbm3-production-by-the-end-of-2026-cxmt-to-produce-chips-while-naura-maxwell-and-u-preseason-design-tools-for-assembly">Tom's HW</a></td></tr>
+      <tr><td>4. 채널 재고 위크 수</td><td><span class="nodata">정확 수치 미공개</span>. TrendForce 5/6 Bulletin: "supplier inventories bottomed out" — 4주 초과 시그널 <b>아님</b>. 공급사 재고 바닥 = 가격 추가 상승 압력</td><td>2026-05-06</td><td><a href="https://www.trendforce.com/research/download/RP260506QK">TrendForce DRAM Bulletin 5/6</a></td></tr>
+      <tr><td>5. 메모리 현물가/계약가</td><td>HBM3E 2026 계약가 +20%. <b>일반 DRAM Q2'26 계약가 +58~63% QoQ 전망 (Q1 +90~95% 대비 둔화)</b>. RDIMM 가격이 HBM 추월 (이례적). NAND Q2 +75% 전망</td><td>2026-04-30 / 진행</td><td><a href="https://www.trendforce.com/presscenter/news/20260331-12995.html">TrendForce 3/31</a> · <a href="https://www.tomshardware.com/pc-components/dram/dram-and-nand-contract-prices-to-climb-again-in-q2">Tom's HW DRAM</a></td></tr>
+      <tr><td>6. 신규 IB·리서치 보고서</td><td>SK증권 5/7: 삼성 50만 / SK하이닉스 300만 (P/B → P/E 전환). 골드만/모건 5/7~5/8 신규 코멘트 <span class="nodata">확인 필요</span></td><td>2026-05-07</td><td><a href="https://www.mt.co.kr/stock/2026/05/07/2026050709584928346">머니투데이</a> · <a href="https://news.bizwatch.co.kr/article/market/2026/05/07/0003">비즈워치</a></td></tr>
     </tbody>
   </table>
-  <div class="warn"><b>요약:</b> 6대 시그널 중 공급 과잉 신호 <b>0개</b>. 오히려 (1) DDR5 +60% 가격 인상 (2) 재고 바닥 (3) CXMT 양산 지연 (4) Cloud 백로그 폭증 — 모두 공급 부족 지속 방향. <b>5/8 주가 약세는 펀더멘털이 아닌 매크로 충격</b>.</div>
+  <div class="warn"><b>요약:</b> 6대 시그널 중 공급 과잉 신호 <b>0개</b>. 오히려 (1) DDR5 +60% 가격 인상 (2) 공급사 재고 바닥 (3) CXMT 양산 지연 (4) Cloud 백로그 폭증 (5) SK하이닉스 M15X 팹 5월 완공 — 모두 공급 부족 지속 방향. <b>5/8 주가 약세는 펀더멘털이 아닌 매크로 충격</b>.</div>
+
+  <details class="explainer">
+    <summary>ℹ️ 이 지표는 무엇을 의미하나요? 왜 보나요? 코스피에 어떤 영향이 있나요?</summary>
+    <div class="explainer-body">
+      <h4>📊 무엇을 보고 있나</h4>
+      <p>(1) HBM4 수율 진척 — 12·16층 적층 수율이 공급 곡선을 결정. (2) 삼성의 엔비디아 HBM4 퀄 통과 여부 — 통과 시 SK하이닉스 점유율 잠식. (3) 중국 CXMT의 HBM 양산 진입 — 중저가 시장 가격 하락 압력. (4) 채널 재고 위크 수 — 현재 약 2개월(타이트), 4개월 초과 시 경고. (5) 메모리 현물가/계약가 동향. (6) 골드만삭스·모건스탠리·트렌드포스의 신규 공급 과잉 보고서.</p>
+      <h4>🎯 왜 이 지표를 추적하나</h4>
+      <p>HBM 공급 과잉은 한국 반도체 회사의 가격결정력을 무너뜨리는 가장 직접적 위협입니다. 수율 개선·삼성 점유율 확대·중국 진입은 모두 공급 곡선을 늘리는 변수이고, 채널 재고와 현물가는 수요 측 신호입니다. 6개 시그널 중 2개 이상이 동시에 흔들리는 분기가 변곡점일 가능성이 큽니다.</p>
+      <h4>🇰🇷 코스피에 어떻게 영향을 미치나</h4>
+      <p>SK하이닉스는 현재 메모리 영업이익의 큰 비중을 HBM에서 얻고 있습니다. 공급 과잉 시그널이 누적되면 → HBM 가격 하락 → SK하이닉스 영업이익 하향 → 주가↓ → SK하이닉스만으로도 코스피에 비대칭 충격. 삼성도 같은 방향이지만 HBM 외 사업이 더 다각화되어 있어 충격은 상대적으로 작습니다. 두 회사가 동반 하락하면 코스피는 즉시 7,000선 검증 압력에 진입할 수 있습니다.</p>
+      <h4>📌 오늘의 맥락</h4>
+      <p>오늘은 6대 시그널 중 공급 과잉 신호가 0개입니다. 특히 (1) Q2 일반 DRAM 계약가 +58~63% (2) 공급사 재고 바닥 (3) SK하이닉스 M15X 5월 완공으로 캐파 확장이 시장 수요를 따라잡는 단계 — 모두 "공급 < 수요" 구도를 강화합니다. 다만 삼성의 NVIDIA HBM4 점유율이 20% → 28%로 확대되면서 SK하이닉스 점유율은 59% → 50%로 축소 — 두 회사 간 점유율 재편이 진행 중이라는 점은 SK하이닉스 단독 상승률에 약한 마찰을 줄 수 있습니다.</p>
+    </div>
+  </details>
 </section>
 
 <!-- F. 매크로/지정학 -->
@@ -209,18 +293,32 @@
   <table>
     <thead><tr><th>이슈</th><th>현황</th><th>출처</th></tr></thead>
     <tbody>
-      <tr><td>호르무즈 충돌 (5/7 야간 → 5/8)</td><td><b class="down">⚠ 휴전 붕괴 위험.</b> 美 폭스: 미군이 케슘섬·반다르아바스 공습. CENTCOM: 이란이 미사일·드론·소형선박으로 美 구축함 표적. 이란 IRIB: 美 부대 미사일 피격 후 도주 주장. 한국 화물선 '나무호' 폭발 후 두바이 항구 예인. 트럼프, "Operation Freedom" 일시 중단 후 재개 검토.</td><td><a href="https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html">CNBC 5/8</a> · <a href="https://www.newspim.com/news/view/20260508000037">뉴스핌 5/8</a> · <a href="https://www.kmib.co.kr/article/view.asp?arcid=0029790162">국민일보</a></td></tr>
-      <tr><td>미·중 정상회담</td><td>2026-05-14 / 15 베이징 확정. 의제: 이란유·대만·관세·희토류·AI(H200 거래 위축). CNBC 5/8: <i>"Iran 이슈가 관세·희토류 진전 지연 가능"</i>.</td><td><a href="https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html">CNBC 5/8</a> · <a href="https://asiatimes.com/2026/05/trump-xi-summit-set-to-weigh-iran-oil-taiwan-and-us-exports/">Asia Times</a></td></tr>
-      <tr><td>브렌트유 (5/8 오전)</td><td class="num">$102.32 <span class="up">+2.26%</span> (7월물)</td><td><a href="https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html">CNBC 5/8</a></td></tr>
-      <tr><td>WTI (5/8 오전)</td><td class="num">$96.76 <span class="up">+2.06%</span> (6월물)</td><td><a href="https://www.cnbc.com/2026/05/08/oil-prices-today-wti-brent-us-iran-fire-war-hormuz-ceasefire.html">CNBC 5/8</a></td></tr>
+      <tr><td>호르무즈 충돌 (5/7~5/8)</td><td><b class="down">⚠ 양측 휴전 위반 주장 충돌.</b> 美 CENTCOM 5/7: 美軍이 호르무즈 통과 중 이란 공격을 저지·자위 반격. 이란 IRGC: 美가 호르무즈 선박·민간 지역 공격 주장. 美·이란 14항목 1쪽 MOU 협상 진행 — 호르무즈 30일 휴전 + 이란 우라늄 농축 20년 중단·고농축 우라늄 양도 + 美 제재 해제. 트럼프 "휴전 유지" vs 이란 "위반".</td><td><a href="https://www.fnnews.com/news/202605080537466681">파이낸셜뉴스 5/8 새벽</a> · <a href="https://www.fnnews.com/news/202605080833528397">FN 5/8 08:33</a> · <a href="https://biz.heraldcorp.com/article/10733529">헤럴드</a></td></tr>
+      <tr><td>미·중 정상회담</td><td>2026-05-14 / 15 베이징 확정. 의제: <b>이란유·대만·관세·희토류·AI(H200)</b>. 신규: AI 안전 대화 포럼 신설 검토, Jimmy Lai 석방 가능성 논의, 中 보잉기·농산물 구매 발표 가능성. 트럼프, 약 10년 만의 첫 美 대통령 방중. CNBC 5/8: 이란 이슈가 관세·희토류 진전 지연 가능.</td><td><a href="https://www.cnbc.com/2026/05/08/iran-focus-at-trump-xi-summit-may-delay-progress-on-tariffs-rare-earths.html">CNBC 5/8</a> · <a href="https://www.bloomberg.com/news/articles/2026-05-04/trump-says-he-looks-forward-to-xi-summit-even-as-tensions-mount">Bloomberg 5/4</a></td></tr>
+      <tr><td>브렌트유 (5/8 오전)</td><td class="num">$101대 안정 (전일 종가 $100.06 직후 상승 반전 → $101+) <span class="up">변동성 지속</span></td><td><a href="https://tradingeconomics.com/commodity/brent-crude-oil">TradingEconomics</a> · <a href="https://www.cnbc.com/2026/05/07/oil-prices-today-trump-iran-strait-of-hormuz-us-crude-brent-.html">CNBC 5/7</a></td></tr>
+      <tr><td>WTI (5/8 오전)</td><td class="num">$94.81 (5/7 종가, <span class="down">-0.28%</span>) → 5/8 호르무즈 충돌 재격화 후 상방 변동</td><td><a href="https://www.cnbc.com/2026/05/07/oil-prices-today-trump-iran-strait-of-hormuz-us-crude-brent-.html">CNBC 5/7</a></td></tr>
     </tbody>
   </table>
+
+  <details class="explainer">
+    <summary>ℹ️ 이 지표는 무엇을 의미하나요? 왜 보나요? 코스피에 어떤 영향이 있나요?</summary>
+    <div class="explainer-body">
+      <h4>📊 무엇을 보고 있나</h4>
+      <p>미·중 정상회담 일정과 진행 상황, 중동 정세(이란-이스라엘, 호르무즈 해협 안정성), 유가(브렌트·WTI).</p>
+      <h4>🎯 왜 이 지표를 추적하나</h4>
+      <p>한국 시장은 외국인 자금 회전성이 매우 높아 글로벌 위험 선호도(risk-on/off)에 민감합니다. 미·중 회담 결과는 반도체 수출 규제·관세 변동을 직접 유발할 수 있고, 중동 정세는 유가 충격을 통해 미국 인플레이션·금리 경로에 영향을 줍니다.</p>
+      <h4>🇰🇷 코스피에 어떻게 영향을 미치나</h4>
+      <p>미·중 갈등 격화 → 외국인 위험회피 → 코스피·원화 동시 약세. 유가 급등 → 미국 인플레이션 우려↑ → 미국 금리 추가 인상 가능성↑ → 한국 외국인 자금 유출. 호르무즈 해협 휴전이 깨지는 등 극단적 이벤트는 단 하루에 코스피 5% 이상 조정도 가능한 영역입니다.</p>
+      <h4>📌 오늘의 맥락</h4>
+      <p>오늘은 호르무즈 양측 충돌 주장이 정면 부딪치는 와중에도 14항목 MOU 협상이 진행되는 "타협 vs 결렬"의 양립 구간입니다. KOSPI -2.13% 하락은 이 양립 상태가 시장 가격에 반영된 결과입니다. 6일 후 5/14~15 미·중 정상회담에서 이란 의제가 우선순위로 올라가면 관세·희토류 합의가 지연될 수 있어, 이번 주 후반 ~ 다음 주 초가 변동성 정점이 될 가능성이 높습니다.</p>
+    </div>
+  </details>
 </section>
 
 <!-- 시계열 -->
 <section>
-  <h2>시계열 차트 <span class="sub">최근 7일 추이 (누적 2개 스냅샷)</span></h2>
-  <p class="src">스냅샷 누적이 2회로 증가. 7거래일 채워질 때까지 막대 길이는 첫 스냅샷 대비 비율로 표시 (구간 변동성을 시각화하기 위함).</p>
+  <h2>시계열 차트 <span class="sub">최근 7일 추이 (누적 3개 스냅샷)</span></h2>
+  <p class="src">스냅샷 누적이 3회로 증가. 7거래일 채워질 때까지 막대 길이는 첫 스냅샷 대비 비율로 표시 (구간 변동성을 시각화하기 위함).</p>
   <table>
     <thead><tr><th>날짜 / 회차</th><th>코스피</th><th>삼성전자</th><th>SK하이닉스</th><th>원/달러</th><th>브렌트유</th></tr></thead>
     <tbody>
@@ -238,13 +336,20 @@
         <td><div class="barwrap"><div class="bar"><span style="width:99.79%"></span></div><span class="num">1,445.48 (개장)</span></div></td>
         <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">$102.32 (+2.26%)</span></div></td>
       </tr>
+      <tr><td>2026-05-08 (Morning · 09:16 KST · 본 회차)</td>
+        <td><div class="barwrap"><div class="bar"><span class="dn" style="width:97.87%"></span></div><span class="num">7,330.56 (-2.13%)</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">반등 +2%대</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span style="width:100%"></span></div><span class="num">반등 +3%대</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span class="dn" style="width:99.59%"></span></div><span class="num">1,456.00 (야간)</span></div></td>
+        <td><div class="barwrap"><div class="bar"><span style="width:99.06%"></span></div><span class="num">$101대 (변동성)</span></div></td>
+      </tr>
     </tbody>
   </table>
 </section>
 
 <footer>
-  하루 2회 자동 갱신 (08:00 KST 장 시작 전 / 17:00 KST 장 마감 후)<br>
-  데이터 소스: KRX · 머니투데이 · 파이낸셜뉴스 · 헤럴드경제 · 이투데이 · 뉴스핌 · CNBC · TheStreet · Bloomberg · TrendForce · Digitimes · KED Global · Tom's Hardware<br>
+  하루 2회 자동 갱신 (08:00 KST 장 시작 전 / 17:00 KST 장 마감 후) — 본 회차는 11:16 KST 장중 인트라데이 추가 갱신<br>
+  데이터 소스: KRX · 머니투데이 · 파이낸셜뉴스 · 헤럴드경제 · 이투데이 · 뉴스핌 · CNBC · TheStreet · Bloomberg · TrendForce · Digitimes · KED Global · Tom's Hardware · Investing.com · TradingEconomics<br>
   본 대시보드는 정보 제공용이며 투자 자문이 아닙니다. 모든 수치는 출처 링크에서 직접 확인 가능합니다.
 </footer>
 
