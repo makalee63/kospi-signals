@@ -556,6 +556,51 @@
       "red_flags": [],
       "red_flags_triggered_24h": [],
       "summary": "5/9(토) 08:09 KST morning: 한국 휴장. 5/8 KOSPI 7,498(+0.11%, 4일연속 사상최고) 외국인 -5.59조. 미증시 5/8 동반 사상최고(S&P 7,398.93 +0.84%, 나스닥 26,247.08 +1.71%) 4월 고용 골디락스. Brent $101.73 인트라데이 ±10% 변동(호르무즈 충돌). RED FLAG 6대 트리거 신규 발화 0건."
+    },
+    {
+      "timestamp_utc": "2026-05-09T08:01:00Z",
+      "timestamp_kst": "2026-05-09 17:01 KST",
+      "session": "evening",
+      "snapshot_path": "snapshots/2026-05-09-0801UTC.html",
+      "note": "Saturday weekend evening session — KOSPI closed today; uses 2026-05-08 (Fri) close data and weekend macro updates.",
+      "kospi_close": 7498.0,
+      "kospi_change_pct": 0.11,
+      "kospi_change_pts": 7.95,
+      "foreign_net_buy_krw": -5533700000000,
+      "individual_net_buy_krw": 3930100000000,
+      "institution_net_buy_krw": 1536500000000,
+      "vkospi": null,
+      "vkospi_note": "5/8 마감치 미확인 (마지막 알려진 값 60.07 / 5/6)",
+      "usd_krw": 1462.77,
+      "usd_krw_change_pct": 0.28,
+      "samsung_price": 268500,
+      "samsung_market_cap_trn_krw_approx": 1500,
+      "sk_hynix_price": 1686000,
+      "sk_hynix_change_pct_vs_5_7": 1.93,
+      "bigtech_capex_2026_total_usd_bn": 725,
+      "macro": {
+        "brent_usd": 101.29,
+        "brent_change_pct": 1.0,
+        "wti_usd": 95.42,
+        "iran_us_status": "5/8 fire exchange in Strait of Hormuz; Trump 'love tap'; Iran reviewing US proposal (Rubio expects response Fri)",
+        "trump_xi_summit": "Beijing 2026-05-14/15; CNBC 5/8: Iran focus may delay tariff/rare-earth progress"
+      },
+      "hbm_status": {
+        "samsung_nvidia_qual": "passed (2025-12); Feb 2026 mass production; ~28% NVIDIA HBM4 share",
+        "skhynix_nvidia_share": "~70%; 11Gbps reliability work in progress",
+        "cxmt_status": "HBM3 ramp ~60K wafer/mo target; 12-layer HBM first mass production reported (Tom's); Digitimes 4/21 still flags delay — conflicting",
+        "channel_inventory_weeks": null,
+        "trendforce_2q26_dram_qoq_pct": "+58 to +63",
+        "rdimm_vs_hbm": "RDIMM contract margins temporarily ahead of HBM (atypical)"
+      },
+      "red_flags": [],
+      "macro_flags": [
+        {
+          "code": "macro_hormuz_continued",
+          "description": "5/8 US-Iran fire exchange in Strait of Hormuz; Brent +1% to $101.29; ceasefire nominal but fragile; ongoing — not new vs 5/8 morning snapshot"
+        }
+      ],
+      "summary": "토요일 휴장 회차. 5/8 금요일 KOSPI 7,498 사상 최고치(+0.11%) 외국인 5.5조 순매도에도 개인·기관이 5.5조 매수로 받쳐냄. SK하이닉스 1,686,000원(+1.93%) 견인. 환율 1,462.77원으로 원화 약세 누적. 6대 RED FLAG 신규 트리거 없음 / 호르무즈 사격 교환 매크로 리스크 연속."
     }
   ]
 }
