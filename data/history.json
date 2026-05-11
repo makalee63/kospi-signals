@@ -479,7 +479,7 @@
         "sp500_change_pct": 0.84,
         "nasdaq": 26247.08,
         "nasdaq_change_pct": 1.71,
-        "context": "S&P + Nasdaq 동반 사상최고치. 4월 비농업 +115K (컨센서스 55~62K 상회) · 임금 상승률 둘화 → 골디락스 해석. 호르무즈 충돌·유가 변동성에도 위험선호 우위.",
+        "context": "S&P + Nasdaq 동반 사상최고치. 4월 비농업 +115K (컨센서스 55~62K 상회) · 임금 상승률 둔화 → 골디락스 해석. 호르무즈 충돌·유가 변동성에도 위험선호 우위.",
         "april_jobs_nonfarm": 115000,
         "april_jobs_consensus": 60000,
         "unemployment_rate": 4.3,
@@ -551,7 +551,7 @@
         "unemployment_rate_pct": 4.3,
         "wage_growth_mom_pct": 0.2,
         "wage_growth_yoy_pct": 3.6,
-        "interpretation": "골디락스 — 고용 견조하지만 임금 상승 둘화로 인플레 압력 완화. 미증시 위험선호 견인."
+        "interpretation": "골디락스 — 고용 견조하지만 임금 상승 둔화로 인플레 압력 완화. 미증시 위험선호 견인."
       },
       "red_flags": [],
       "red_flags_triggered_24h": [],
