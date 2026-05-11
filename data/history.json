@@ -479,7 +479,7 @@
         "sp500_change_pct": 0.84,
         "nasdaq": 26247.08,
         "nasdaq_change_pct": 1.71,
-        "context": "S&P + Nasdaq 동반 사상최고치. 4월 비농업 +115K (컨센서스 55~62K 상회) · 임금 상승률 둔화 → 골디락스 해석. 호르무즈 충돌·유가 변동성에도 위험선호 우위.",
+        "context": "S&P + Nasdaq 동반 사상최고치. 4월 비농업 +115K (컨센서스 55~62K 상회) · 임금 상승률 둘화 → 골디락스 해석. 호르무즈 충돌·유가 변동성에도 위험선호 우위.",
         "april_jobs_nonfarm": 115000,
         "april_jobs_consensus": 60000,
         "unemployment_rate": 4.3,
@@ -551,7 +551,7 @@
         "unemployment_rate_pct": 4.3,
         "wage_growth_mom_pct": 0.2,
         "wage_growth_yoy_pct": 3.6,
-        "interpretation": "골디락스 — 고용 견조하지만 임금 상승 둔화로 인플레 압력 완화. 미증시 위험선호 견인."
+        "interpretation": "골디락스 — 고용 견조하지만 임금 상승 둘화로 인플레 압력 완화. 미증시 위험선호 견인."
       },
       "red_flags": [],
       "red_flags_triggered_24h": [],
@@ -601,6 +601,170 @@
         }
       ],
       "summary": "토요일 휴장 회차. 5/8 금요일 KOSPI 7,498 사상 최고치(+0.11%) 외국인 5.5조 순매도에도 개인·기관이 5.5조 매수로 받쳐냄. SK하이닉스 1,686,000원(+1.93%) 견인. 환율 1,462.77원으로 원화 약세 누적. 6대 RED FLAG 신규 트리거 없음 / 호르무즈 사격 교환 매크로 리스크 연속."
+    },
+    {
+      "timestamp_utc": "2026-05-11T01:42:00Z",
+      "timestamp_kst": "2026-05-11 10:42 KST",
+      "session": "morning",
+      "snapshot_path": "snapshots/2026-05-11-0142UTC.html",
+      "note": "5/11 (월) morning · 한국 정규장 인트라데이 (09:35 KST 기준). 사상 첫 KOSPI 7,800선 돌파 / 09:29:32 매수 사이드카 발동(올해 7번째). 미 5/8 DRAM ETF +13% / 마이크론 +15.5% 후행 갭업. RED FLAG 6대 트리거 신규 발화 0건 — 오히려 TrendForce 5/6 Top 9 CSP capex $830B(+79% YoY) 상향 + MSFT '최소 6월까지 캐파 부족' 명시로 강세론 강화. 매크로: 5/10 일요일 트럼프 이란 답변 'totally unacceptable'·Brent +3.17% → $104.50, 5/12 KOSPI 갭다운 위험 잠재.",
+      "kospi_open": 7775.31,
+      "kospi_open_change_pct": 3.7,
+      "kospi_intraday_0902kst": 7816.66,
+      "kospi_change_pct_0902kst": 4.25,
+      "kospi_intraday_0935kst": 7842.27,
+      "kospi_change_pct_0935kst": 4.59,
+      "kospi_change_pct": 4.59,
+      "kospi_close": null,
+      "kospi_prev_close_5_8": 7498.0,
+      "kospi_record_first_7800_breakthrough": true,
+      "kospi200_futures_change_pct_at_sidecar": 5.1,
+      "kospi200_futures_value_at_sidecar": 1210.54,
+      "kospi200_futures_change_pts_at_sidecar": 58.82,
+      "buy_sidecar_triggered_at_kst": "09:29:32",
+      "buy_sidecar_count_2026": 7,
+      "foreign_net_buy_krw": -435000000000,
+      "foreign_net_buy_krw_bn_0935kst": -435.0,
+      "individual_net_buy_krw_bn_0935kst": 527.3,
+      "institution_net_buy_krw_bn_0935kst": -81.2,
+      "vkospi": 60.07,
+      "vkospi_last_known_date": "2026-05-06",
+      "vkospi_5_11_status": "확인 필요 (개장 갱신값 미확보)",
+      "usd_krw": 1466.0,
+      "usd_krw_open_change_won": -5.7,
+      "usd_krw_alt_open_estimate": 1458.68,
+      "samsung_price": 286750,
+      "samsung_change_pct": 6.8,
+      "samsung_change_won": 18250,
+      "samsung_prev_close_5_8": 268500,
+      "samsung_market_cap_trn_krw_estimate": 1712,
+      "sk_hynix_price": 1873000,
+      "sk_hynix_change_pct": 11.09,
+      "sk_hynix_change_won": 187000,
+      "sk_hynix_prev_close_5_8": 1686000,
+      "sk_hynix_market_cap_trn_krw_estimate": 1364,
+      "samsung_premarket_0804kst": {
+        "price_krw": 284500,
+        "change_pct": 5.96,
+        "change_won": 16000
+      },
+      "skhynix_premarket_0804kst": {
+        "price_krw": 1793000,
+        "change_pct": 6.35,
+        "change_won": 107000
+      },
+      "us_market_5_8_close": {
+        "sp500": 7398.93,
+        "sp500_change_pct": 0.84,
+        "nasdaq": 26247.08,
+        "nasdaq_change_pct": 1.71,
+        "dow": 49609.16,
+        "dow_change_pct": 0.02,
+        "weekly_sp500_pct": 2.3,
+        "weekly_nasdaq_pct": 4.5,
+        "weekly_streak": "6 weeks straight (longest since 2024)",
+        "context": "동반 사상최고치. 4월 비농업 +115K(컨센 60K 상회) 골디락스. DRAM ETF +13% / 마이크론 +15.5% / 샌디스크 +16.6% 메모리 강세 — 5/11 KOSPI 갭업의 직접 원인.",
+        "dram_etf_change_pct": 13,
+        "micron_change_pct": 15.5,
+        "sandisk_change_pct": 16.6
+      },
+      "bigtech_capex_2026_guidance_usd_bn": {
+        "MSFT": 190,
+        "MSFT_component_cost_cited_usd_bn": 25,
+        "MSFT_q1_fy26_capex_usd_bn": 34.9,
+        "MSFT_azure_growth_pct": 40,
+        "MSFT_azure_backlog_usd_bn": 392,
+        "MSFT_azure_backlog_growth_pct": 51,
+        "MSFT_azure_unfulfilled_orders_usd_bn": 80,
+        "GOOGL_low": 180,
+        "GOOGL_high": 190,
+        "GOOGL_cloud_backlog_usd_bn": 462,
+        "GOOGL_cloud_backlog_qoq_change": "nearly doubled",
+        "META_low": 125,
+        "META_high": 145,
+        "AMZN": 200,
+        "combined_total": 725,
+        "yoy_growth_pct": 77,
+        "delta_vs_prev_snapshot": "no change in 24h; next trigger Q2'26 earnings (2026-07)",
+        "trendforce_top9_csp_2026_capex_usd_bn": 830,
+        "trendforce_top9_csp_2026_yoy_pct": 79,
+        "trendforce_publication_date": "2026-05-06"
+      },
+      "bigtech_financial_health": {
+        "msft_5y_cds_bp": 41,
+        "amzn_5y_cds_bp": 58,
+        "orcl_5y_cds_bp": 125,
+        "hyperscaler_2026_debt_issuance_plan_usd_bn": 400,
+        "hyperscaler_2025_debt_issuance_actual_usd_bn": 165,
+        "delta_vs_prev_snapshot": "no new bond issuance / CDS event in 24h"
+      },
+      "hbm_signals": {
+        "samsung_hbm4_status": "passed NVIDIA qual (2025-12); 30%+ NVIDIA HBM4 supply contract finalization stage; Q2 2026 shipments expected; logic chip yield >90%, 1c DRAM yield ~50-60%",
+        "skhynix_hbm4_status": "11Gb/s test optimization ongoing; M15X fab first cleanroom completion in May 2026 with pilot operations (HBM3E + HBM4)",
+        "hbm_market_share_2026_bit_output": {
+          "skhynix_pct": 50,
+          "samsung_pct": 28,
+          "skhynix_2025_pct": 59,
+          "samsung_2025_pct": 20
+        },
+        "samsung_hbm_capacity_2026_target_wafers_per_month": 250000,
+        "samsung_hbm_capacity_current_wafers_per_month": 170000,
+        "cxmt_hbm3_status_trendforce_5_6": "CXMT의 HBM 시장 점유는 R&D 한계로 작은 수준에 머물 것 — 강세론 강화 평가",
+        "cxmt_hbm3_target_wafers_per_month": 60000,
+        "cxmt_hbm3_pct_of_total_capacity": 20,
+        "cxmt_total_capacity_wafers_per_month": 300000,
+        "hbm_channel_inventory_status": "supplier inventories bottomed out (TrendForce 5/6); 4주 초과 트리거 미발화",
+        "hbm3e_pricing_2026_contract_pct_increase": 20,
+        "trendforce_dram_bulletin_2026_05_06": "supplier inventories bottomed out; AI/server demand driving Q2 contract price hikes",
+        "trendforce_q2_2026_dram_contract_qoq_pct_low": 58,
+        "trendforce_q2_2026_dram_contract_qoq_pct_high": 63,
+        "trendforce_q1_2026_dram_contract_qoq_pct_actual": "90-95%",
+        "rdimm_vs_hbm_pricing": "RDIMM contract prices have overtaken HBM (atypical) — TrendForce Apr.2026",
+        "sk_securities_2026_05_07_target_prices": {
+          "samsung_target_krw": 500000,
+          "skhynix_target_krw": 3000000,
+          "samsung_2026_op_trn_krw": 47,
+          "samsung_2027_op_trn_krw": 49,
+          "skhynix_2026_op_trn_krw": 26.2,
+          "skhynix_2027_op_trn_krw": 37.6
+        }
+      },
+      "macro": {
+        "brent_usd_5_10_sun": 104.5,
+        "brent_change_pct_5_10": 3.17,
+        "brent_5_8_close": 101.29,
+        "brent_weekend_gap_usd": 3.21,
+        "wti_usd_5_10_sun": 98.48,
+        "wti_change_pct_5_10": 3.21,
+        "iran_us_status": "5/10(일) 트럼프 이란 답변 'totally unacceptable' / 'playing games' 발언 — 협상 좌초 위기. 5/7 USS Mason 등 美 함정 3척 호르무즈 통과 중 이란 미사일 공격 받음(피해 없음). CENTCOM 호르무즈 통과 상선 58척 회항 조치. 카타르 총리 5/9 마이애미 미 측(Rubio·Witkoff·Vance) 회담. 호르무즈 사실상 2월 말부터 폐쇄 지속 — IEA '글로벌 공급 ~14M b/d 차단'.",
+        "iran_us_status_severity": "악화 (vs 5/9 evening 회차)",
+        "trump_xi_summit": "Beijing 2026-05-14 / 5-15 — 3일 앞. 의제: 관세, 희토류, 반도체 수출통제, AI, 대만, 이란, 보잉 구매. CFR/Brookings: 이란 이슈가 의제 잠식, 트럼프 deliverables 도출 어려움. 17년 만의 미국 대통령 방중.",
+        "qatari_pm_meeting_date": "2026-05-09",
+        "centcom_vessels_turned_around": 58,
+        "iea_supply_loss_million_bpd": 14
+      },
+      "red_flags": [],
+      "red_flags_triggered_24h": [],
+      "macro_flags": [
+        {
+          "code": "macro_iran_negotiation_collapse_risk",
+          "description": "트럼프 5/10 이란 답변 'totally unacceptable' / 'playing games' 발언으로 협상 좌초 위기. Brent +3.17%로 $104.50 갭업. 5/12 한국 시초 갭다운 잠재. 6대 트리거 정의 외이지만 신규 시프트.",
+          "sources": [
+            "https://www.cbsnews.com/live-updates/iran-war-trump-us-attacks-qeshm-island-ceasefire/",
+            "https://www.cnn.com/2026/05/10/world/live-news/iran-war-news",
+            "https://www.cnbc.com/2026/05/09/us-and-iran-are-no-closer-to-ending-war-tehrans-response-awaited.html"
+          ]
+        }
+      ],
+      "summary": "5/11(월) 10:42 KST morning: 사상 첫 KOSPI 7,800 돌파 (09:35 7,842.27 +4.59%) · 09:29:32 매수 사이드카 발동(올해 7번째) · 삼성전자 286,750원(+6.80%) · SK하이닉스 1,873,000원(+11.09%) · 미 5/8 DRAM ETF +13% 후행 갭업 · 외국인은 -4,350억 차익실현(개인 +5,273억 흡수) · USD/KRW 1,466원(-5.7원 원화 강세) · RED FLAG 6대 신규 발화 0건 (오히려 TrendForce Top 9 CSP capex $830B/+79% 상향 + MSFT '6월까지 캐파 부족' 강세론 강화) · 매크로: 트럼프 이란 답변 'totally unacceptable', Brent +3.17%로 $104.50 — 5/12 한국 시초 갭다운 잠재.",
+      "explainer_panels_added": [
+        "A_korea_market",
+        "B_bigtech_capex",
+        "C_bigtech_financial_health",
+        "D_keyword_detection",
+        "E_hbm_six_signals",
+        "F_macro_geopolitics"
+      ]
     }
   ]
 }
