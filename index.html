@@ -35,6 +35,7 @@ a:hover { text-decoration: underline; }
 .red-flag-row { background: #fef2f2 !important; border-left: 4px solid #ef4444; }
 .red-flag-banner { background: #fef2f2; border: 2px solid #ef4444; border-radius: 8px; padding: 16px; margin: 16px 0; color: #991b1b; }
 .no-flag-banner { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 12px 16px; margin: 8px 0; color: #166534; font-size: 14px; }
+.headline-flash { background: linear-gradient(135deg, #fef3c7 0%, #ffedd5 100%); border: 2px solid #f59e0b; border-radius: 10px; padding: 14px 18px; margin: 8px 0; color: #78350f; font-size: 14px; font-weight: 500; }
 
 .session-tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
 .session-morning { background: #dbeafe; color: #1e40af; }
@@ -57,6 +58,7 @@ a:hover { text-decoration: underline; }
   .red-flag-row { background: #450a0a !important; }
   .red-flag-banner { background: #450a0a; color: #fecaca; }
   .no-flag-banner { background: #052e16; color: #bbf7d0; border-color: #166534; }
+  .headline-flash { background: linear-gradient(135deg, #422006 0%, #431407 100%); color: #fde68a; border-color: #b45309; }
   .header-meta { color: #9ca3af; }
   .header-meta strong { color: #f3f4f6; }
   .up { color: #f87171; }
@@ -72,44 +74,46 @@ a:hover { text-decoration: underline; }
 <h1>📊 코스피 · 빅테크 · HBM 시그널 대시보드</h1>
 <p class="header-meta">하루 2회 자동 갱신 · 회차별 풀 분석 아카이브</p>
 <p class="header-meta">
-  마지막 갱신: <strong>2026-05-09 08:01 UTC</strong> (2026-05-09 17:01 KST · evening · 토요일 휴장) ·
-  총 회차 수: <strong>7회</strong> ·
+  마지막 갱신: <strong>2026-05-11 01:42 UTC</strong> (2026-05-11 10:42 KST · morning · 한국 정규장 인트라데이) ·
+  총 회차 수: <strong>8회</strong> ·
   데이터 소스: <a href="data/history.json">data/history.json</a>
 </p>
 
 <!-- 최신 회차 요약 카드 -->
 <div class="latest-card">
-  <h2>최신 회차 (2026-05-09 17:01 KST · evening)</h2>
-  <p class="note">Saturday weekend evening session — KOSPI closed today; uses 2026-05-08 (Fri) close data and weekend macro updates.</p>
+  <h2>최신 회차 (2026-05-11 10:42 KST · morning)</h2>
+  <div class="headline-flash">
+    🚀 <strong>장중 속보</strong>: 5/11 09:29:32 KST <strong>매수 사이드카 발동</strong>(올해 7번째) · 코스피 사상 첫 <strong>7,800선 돌파</strong> · 09:35 7,842.27 (+4.59%) · 미 5/8 DRAM ETF +13% 후행 갭업.
+  </div>
   <div class="latest-stats">
     <div class="latest-stat">
-      <div class="value">7,498.00</div>
-      <div class="label">KOSPI 종가 (+0.11%)</div>
+      <div class="value">7,842.27</div>
+      <div class="label">KOSPI 09:35 (<span class="up">+4.59%</span>)</div>
     </div>
     <div class="latest-stat">
-      <div class="value">-5.53조</div>
-      <div class="label">외국인 순매수</div>
+      <div class="value">-4,350억</div>
+      <div class="label">외국인 (차익실현)</div>
     </div>
     <div class="latest-stat">
-      <div class="value">268,500원</div>
-      <div class="label">삼성전자 종가</div>
+      <div class="value">286,750원</div>
+      <div class="label">삼성전자 (<span class="up">+6.80%</span>)</div>
     </div>
     <div class="latest-stat">
-      <div class="value">1,686,000원</div>
-      <div class="label">SK하이닉스 종가</div>
+      <div class="value">1,873,000원</div>
+      <div class="label">SK하이닉스 (<span class="up">+11.09%</span>)</div>
     </div>
     <div class="latest-stat">
-      <div class="value">1,462.77</div>
-      <div class="label">USD/KRW</div>
+      <div class="value">1,466.00</div>
+      <div class="label">USD/KRW (-5.7원)</div>
     </div>
     <div class="latest-stat">
-      <div class="value">$101.29</div>
-      <div class="label">Brent 원유</div>
+      <div class="value">$104.50</div>
+      <div class="label">Brent (5/10 +3.17%)</div>
     </div>
   </div>
-  <div class="no-flag-banner">✅ 6대 변곡점 RED FLAG 없음 · ⚠️ 매크로 모니터링: macro_hormuz_continued</div>
-  <p class="note">토요일 휴장 회차. 5/8 금요일 KOSPI 7,498 사상 최고치(+0.11%) 외국인 5.5조 순매도에도 개인·기관이 5.5조 매수로 받쳐냄. SK하이닉스 1,686,000원(+1.93%) 견인. 환율 1,462.77원으로 원화 약세 누적. 6대 RED FLAG 신규 트리거 없음 / 호르뭄즈 사격 교환 매크로 리스크 연속.</p>
-  <p><a class="cta-button" href="snapshots/2026-05-09-0801UTC.html">→ 이 회차 풀 대시보드 보기</a></p>
+  <div class="no-flag-banner">✅ 6대 변곡점 RED FLAG 없음 · 오히려 강세론 강화 (TrendForce Top 9 CSP capex $830B/+79% · MSFT "최소 6월까지 캐파 부족" 명시) · ⚠️ 매크로 모니터링: 트럼프 5/10 이란 답변 "totally unacceptable"·Brent 갭업으로 5/12 한국 시초 갭다운 잠재.</div>
+  <p class="note">5/11(월) 10:42 KST morning: 사상 첫 KOSPI 7,800 돌파 / 09:29:32 매수 사이드카 발동(올해 7번째) / 미 5/8 DRAM ETF +13%·마이크론 +15.5% 후행 갭업. 외국인은 -4,350억 차익실현, 개인이 +5,273억으로 흡수. 6대 RED FLAG 신규 발화 0건.</p>
+  <p><a class="cta-button" href="snapshots/2026-05-11-0142UTC.html">→ 이 회차 풀 대시보드 보기</a></p>
 </div>
 
 <!-- 회차 목록 -->
@@ -130,6 +134,18 @@ a:hover { text-decoration: underline; }
     </tr>
   </thead>
   <tbody>
+<tr style="background:#fef3c7;">
+<td><strong>2026-05-11</strong></td>
+<td><strong>10:42</strong></td>
+<td><span class="session-tag session-morning">morning</span></td>
+<td><strong>7,842.27</strong> 🚀</td>
+<td><span class="up">+4.59%</span></td>
+<td><span class="down">-0.44조</span></td>
+<td>—</td>
+<td>1,466.00</td>
+<td><span style='color:#92400e'>⚠️ macro</span></td>
+<td><a href="snapshots/2026-05-11-0142UTC.html">보기</a></td>
+</tr>
 <tr>
 <td>2026-05-09</td>
 <td>17:01</td>
@@ -143,7 +159,7 @@ a:hover { text-decoration: underline; }
 <td><a href="snapshots/2026-05-09-0801UTC.html">보기</a></td>
 </tr>
 <tr>
-<td>2026-05-08</td>
+<td>2026-05-09</td>
 <td>08:09</td>
 <td><span class="session-tag session-morning">morning</span></td>
 <td>7,498.00</td>
@@ -217,21 +233,21 @@ a:hover { text-decoration: underline; }
   </tbody>
 </table>
 
-<!-- 7일 추이 미니 차트 (간이) -->
-<h2>📈 최근 7일 추이 (KOSPI · USD/KRW)</h2>
-<svg width="100%" height="180" viewBox="0 0 700 180" style="margin: 12px 0;">
-  <text x="0" y="14" font-size="12" fill="#6b7280">KOSPI 추이 (회차별 종가)</text>
-  <polyline points="50,140 220,120 380,90 540,80 650,75" stroke="#2563eb" stroke-width="2" fill="none"/>
-  <circle cx="50" cy="140" r="4" fill="#2563eb"/>
-  <circle cx="220" cy="120" r="4" fill="#2563eb"/>
-  <circle cx="380" cy="90" r="4" fill="#2563eb"/>
-  <circle cx="540" cy="80" r="4" fill="#2563eb"/>
-  <circle cx="650" cy="75" r="4" fill="#dc2626"/>
-  <text x="40" y="160" font-size="10" fill="#6b7280">5/2</text>
-  <text x="210" y="160" font-size="10" fill="#6b7280">5/6</text>
-  <text x="370" y="160" font-size="10" fill="#6b7280">5/7</text>
-  <text x="530" y="160" font-size="10" fill="#6b7280">5/8</text>
-  <text x="630" y="160" font-size="10" fill="#dc2626">최신</text>
+<!-- 7일 추이 미니 차트 -->
+<h2>📈 최근 거래일 추이 (KOSPI · 5/6 → 5/11 09:35)</h2>
+<svg width="100%" height="200" viewBox="0 0 700 200" style="margin: 12px 0;">
+  <text x="0" y="14" font-size="12" fill="#6b7280">KOSPI 거래일 추이 — 5/11 갭업 강조</text>
+  <line x1="40" y1="170" x2="680" y2="170" stroke="#e5e7eb" stroke-width="1"/>
+  <polyline points="80,150 280,110 480,105 650,40" stroke="#2563eb" stroke-width="2.5" fill="none"/>
+  <circle cx="80" cy="150" r="5" fill="#2563eb"/>
+  <circle cx="280" cy="110" r="5" fill="#2563eb"/>
+  <circle cx="480" cy="105" r="5" fill="#2563eb"/>
+  <circle cx="650" cy="40" r="7" fill="#dc2626"/>
+  <text x="60" y="190" font-size="11" fill="#6b7280">5/6 7,384</text>
+  <text x="260" y="190" font-size="11" fill="#6b7280">5/7 7,490</text>
+  <text x="460" y="190" font-size="11" fill="#6b7280">5/8 7,498</text>
+  <text x="610" y="190" font-size="12" fill="#dc2626" font-weight="bold">5/11 7,842 ⚡</text>
+  <text x="600" y="30" font-size="10" fill="#dc2626">+4.59% 갭업</text>
 </svg>
 
 <hr style="margin: 32px 0; border: none; border-top: 1px solid #e5e7eb;">
